@@ -1,0 +1,16 @@
+%footer.usa-footer.usa-footer--slim
+  .usa-footer__primary-section
+    .usa-footer__primary-container.grid-row
+      .mobile-lg:grid-col-8
+        %nav.usa-footer__nav{"aria-label" => "Footer navigation"}
+          %ul.grid-row.grid-gap
+            - primary_links.each do |link|
+              = render link
+      .mobile-lg:grid-col-4
+        %address.usa-footer__address
+          .grid-row.grid-gap
+            - contact_links.each do |link|
+              = render link
+  .usa-footer__secondary-section
+    .grid-container
+      = render logo
