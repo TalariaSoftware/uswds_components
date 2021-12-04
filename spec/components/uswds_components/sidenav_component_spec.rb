@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 # https://designsystem.digital.gov/components/sidenav/
-RSpec.describe Uswds::SidenavComponent, type: :component do
+RSpec.describe UswdsComponents::SidenavComponent, type: :component do
   subject(:component) { described_class.new }
 
   def render_component
@@ -30,7 +30,7 @@ RSpec.describe Uswds::SidenavComponent, type: :component do
     expect(page.find('ul')).to have_content('<li>an item</li>')
   end
 
-  describe Uswds::SidenavComponent::Item, type: :component do
+  describe UswdsComponents::SidenavComponent::Item, type: :component do
     subject(:component) do
       described_class.new(name: 'Hello', href: '/fake/path')
     end

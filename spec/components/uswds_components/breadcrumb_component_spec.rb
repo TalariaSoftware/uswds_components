@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 # https://designsystem.digital.gov/components/breadcrumb/
-RSpec.describe Uswds::BreadcrumbComponent, type: :component do
+RSpec.describe UswdsComponents::BreadcrumbComponent, type: :component do
   subject(:component) { described_class.new }
 
   def render_component
@@ -40,9 +40,9 @@ RSpec.describe Uswds::BreadcrumbComponent, type: :component do
     expect(page).to have_css('ol.usa-breadcrumb__list')
   end
 
-  describe Uswds::BreadcrumbComponent::Crumb, type: :component do
+  describe UswdsComponents::BreadcrumbComponent::Crumb, type: :component do
     subject(:component) do
-      Uswds::BreadcrumbComponent::Crumb.new(name: 'Hello', href: '/fake/path')
+      UswdsComponents::BreadcrumbComponent::Crumb.new(name: 'Hello', href: '/fake/path')
     end
 
     def render_component

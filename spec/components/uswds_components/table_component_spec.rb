@@ -4,7 +4,7 @@ require 'rails_helper'
 #
 # TODO:
 # - scrollable
-RSpec.describe Uswds::TableComponent, type: :component do
+RSpec.describe UswdsComponents::TableComponent, type: :component do
   describe 'html' do
     subject(:html) do
       render_inline(component)

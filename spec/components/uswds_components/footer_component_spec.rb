@@ -35,8 +35,8 @@ require 'rails_helper'
 #   - path
 #   - name (of agency)
 
-RSpec.describe Uswds::FooterComponent, type: :component do
-  describe Uswds::FooterComponent::SlimFooter, type: :component do
+RSpec.describe UswdsComponents::FooterComponent, type: :component do
+  describe UswdsComponents::FooterComponent::SlimFooter, type: :component do
     subject(:component) { described_class.new }
 
     def render_component
@@ -187,7 +187,7 @@ RSpec.describe Uswds::FooterComponent, type: :component do
     end
   end
 
-  describe Uswds::FooterComponent::Logo, type: :component do
+  describe UswdsComponents::FooterComponent::Logo, type: :component do
     subject(:component) do
       described_class.new(
         src: '/fake/logo.png',
@@ -264,7 +264,7 @@ RSpec.describe Uswds::FooterComponent, type: :component do
     end
   end
 
-  describe Uswds::FooterComponent::PrimaryLink, type: :component do
+  describe UswdsComponents::FooterComponent::PrimaryLink, type: :component do
     subject(:component) do
       described_class.new(
         href: '/fake/path',
@@ -310,7 +310,7 @@ RSpec.describe Uswds::FooterComponent, type: :component do
     end
   end
 
-  describe Uswds::FooterComponent::ContactLink, type: :component do
+  describe UswdsComponents::FooterComponent::ContactLink, type: :component do
     subject(:component) do
       described_class.new(
         href: 'tel:311',

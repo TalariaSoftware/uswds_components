@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 # https://designsystem.digital.gov/components/collection/
-RSpec.describe Uswds::CollectionComponent, type: :component do
+RSpec.describe UswdsComponents::CollectionComponent, type: :component do
   subject(:component) { described_class.new }
 
   let(:expected_html) do
@@ -33,7 +33,7 @@ RSpec.describe Uswds::CollectionComponent, type: :component do
     expect(rendered_component).to match_html_fragment(expected_html)
   end
 
-  describe Uswds::CollectionComponent::Item do
+  describe UswdsComponents::CollectionComponent::Item do
     def render_component
       render_inline(component) do |item|
         item.header { "Daily News" }

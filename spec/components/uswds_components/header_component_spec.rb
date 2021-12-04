@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 # https://designsystem.digital.gov/components/header/
-RSpec.describe Uswds::HeaderComponent, type: :component do
+RSpec.describe UswdsComponents::HeaderComponent, type: :component do
   subject(:component) do
     described_class.new(
       logo_title: 'Fancy Site',
@@ -18,7 +18,7 @@ RSpec.describe Uswds::HeaderComponent, type: :component do
     end
   end
 
-  describe Uswds::HeaderComponent::Header do
+  describe UswdsComponents::HeaderComponent::Header do
     subject(:component) do
       described_class.new
     end
@@ -44,7 +44,7 @@ RSpec.describe Uswds::HeaderComponent, type: :component do
     end
   end
 
-  describe Uswds::HeaderComponent::Navbar do
+  describe UswdsComponents::HeaderComponent::Navbar do
     subject(:component) do
       described_class.new
     end
@@ -66,7 +66,7 @@ RSpec.describe Uswds::HeaderComponent, type: :component do
     end
   end
 
-  describe Uswds::HeaderComponent::Logo do
+  describe UswdsComponents::HeaderComponent::Logo do
     subject(:component) do
       described_class.new(
         title: "Fancy Site",
@@ -114,7 +114,7 @@ RSpec.describe Uswds::HeaderComponent, type: :component do
     end
   end
 
-  describe Uswds::HeaderComponent::MenuButton do
+  describe UswdsComponents::HeaderComponent::MenuButton do
     subject(:component) do
       described_class.new
     end
@@ -136,7 +136,7 @@ RSpec.describe Uswds::HeaderComponent, type: :component do
     end
   end
 
-  describe Uswds::HeaderComponent::Nav do
+  describe UswdsComponents::HeaderComponent::Nav do
     subject(:component) do
       described_class.new(
         close_content:
@@ -186,7 +186,7 @@ RSpec.describe Uswds::HeaderComponent, type: :component do
     end
   end
 
-  describe Uswds::HeaderComponent::PrimaryList do
+  describe UswdsComponents::HeaderComponent::PrimaryList do
     subject(:component) do
       described_class.new
     end
@@ -213,7 +213,7 @@ RSpec.describe Uswds::HeaderComponent, type: :component do
     end
   end
 
-  describe Uswds::HeaderComponent::PrimaryItem do
+  describe UswdsComponents::HeaderComponent::PrimaryItem do
     subject(:component) do
       described_class.new
     end
@@ -235,7 +235,7 @@ RSpec.describe Uswds::HeaderComponent, type: :component do
     end
   end
 
-  describe Uswds::HeaderComponent::Link do
+  describe UswdsComponents::HeaderComponent::Link do
     subject(:component) do
       described_class.new(href: '/item/path', name: 'Hyrule')
     end
@@ -265,7 +265,7 @@ RSpec.describe Uswds::HeaderComponent, type: :component do
     end
   end
 
-  describe Uswds::HeaderComponent::Submenu do
+  describe UswdsComponents::HeaderComponent::Submenu do
     subject(:component) do
       described_class.new(
         title: "Map",
@@ -274,7 +274,7 @@ RSpec.describe Uswds::HeaderComponent, type: :component do
     end
 
     let(:submenu_item) do
-      Uswds::HeaderComponent::SubmenuItem.new(
+      UswdsComponents::HeaderComponent::SubmenuItem.new(
         href: '/submenu/path', name: 'submenu item',
       )
     end
@@ -348,7 +348,7 @@ RSpec.describe Uswds::HeaderComponent, type: :component do
     end
   end
 
-  describe Uswds::HeaderComponent::SubmenuItem do
+  describe UswdsComponents::HeaderComponent::SubmenuItem do
     subject(:component) do
       described_class.new(href: '/submenu/path', name: 'submenu item')
     end
