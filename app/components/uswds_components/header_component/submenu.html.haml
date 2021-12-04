@@ -1,0 +1,6 @@
+%button.usa-accordion__button.usa-nav__link{"aria-controls" => submenu_id, "aria-expanded" => "false"}
+  %span
+    = title
+%ul.usa-nav__submenu{id: submenu_id}
+  - items.each do |item|
+    = render(item)

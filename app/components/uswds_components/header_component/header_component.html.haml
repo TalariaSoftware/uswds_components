@@ -1,0 +1,11 @@
+%header.usa-header.usa-header--basic
+  .usa-nav-container
+    = render(navbar) do
+      = render(logo)
+      = render(menu_button) do
+        = menu_button_text
+    = render(nav) do
+      = render(UswdsComponents::HeaderComponent::PrimaryList.new) do
+        - primary_items.each do |item|
+          = render (UswdsComponents::HeaderComponent::PrimaryItem.new) do
+            = render(item)
