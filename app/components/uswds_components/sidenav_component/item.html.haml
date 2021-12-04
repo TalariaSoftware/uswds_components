@@ -1,0 +1,6 @@
+%li.usa-sidenav__item
+  = link_to href, class: "#{current_page?(href) ? 'usa-current' : '' }" do
+    = name
+  - if content.present?
+    %ul.usa-sidenav__sublist
+      = content
