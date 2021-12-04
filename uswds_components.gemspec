@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
   spec.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.md"]
 
   spec.add_dependency "rails", "~> 7.0.0.alpha2"
+  spec.add_development_dependency "rspec"
 end
