@@ -5,10 +5,10 @@
     = csrf_meta_tags
     = csp_meta_tag
 
-    %link{rel: :stylesheet, href: 'https://cdn.jsdelivr.net/npm/uswds@2.12.1/dist/css/uswds.min.css', integrity: 'sha256-js2K73974dgJOOiJGfBzHfEYX5yutD4VR1s8I1Roz/w=', crossorigin: :anonymous}
-    %script{src: 'https://cdn.jsdelivr.net/npm/uswds@2.12.1/dist/js/uswds-init.min.js', integrity: 'sha256-s8ivtssrvlThzW9kP7IobVBTgrj2tXanipFmUrGRadE=', crossorigin: :anonymous}
+    %link{:crossorigin => "anonymous", :href => "https://cdn.jsdelivr.net/npm/uswds@2.12.2/dist/css/uswds.css", :integrity => "sha256-GyIb1jKEX3blTGYGrWbret73rXNYIlZ6/eFN83Y3p/U=", :rel => "stylesheet"}/
+    %script{:crossorigin => "anonymous", :integrity => "sha256-9lfV7p6SwtVd8y52fTGAaNFu+rQGUEYODsI5fDErBEI=", :src => "https://cdn.jsdelivr.net/npm/uswds@2.12.2/dist/js/uswds-init.js"}
 
     = stylesheet_link_tag "application"
   %body
     = yield
-    %script{src: 'https://cdn.jsdelivr.net/npm/uswds@2.12.1/dist/js/uswds.min.js', integrity: 'sha256-8ndlefxQ1e+TR4mTn3tEbxa8Wz34XMaO1baXvBaGZa4=', crossorigin: :anonymous}
+    %script{:crossorigin => "anonymous", :integrity => "sha256-bEODhV4qVg5PIbshplXC76WhJoADh8mVW2WkWQQbYFg=", :src => "https://cdn.jsdelivr.net/npm/uswds@2.12.2/dist/js/uswds.js"}
