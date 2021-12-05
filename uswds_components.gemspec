@@ -23,7 +23,8 @@ Gem::Specification.new do |spec|
   spec.add_dependency "view_component"
   spec.add_dependency "haml-rails"
 
-  spec.add_development_dependency "puma"
-  spec.add_development_dependency "rspec-rails"
   spec.add_development_dependency "capybara"
+  spec.add_development_dependency "puma"
+  spec.add_development_dependency "rubocop"
+  spec.add_development_dependency "rspec-rails"
 end

@@ -1,0 +1,89 @@
+AllCops:
+  NewCops: enable
+  Exclude:
+    - bin/*
+    - config.ru
+    - db/schema.rb
+
+Style/Documentation:
+  Enabled: false
+
+Layout/ArgumentAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/HashAlignment:
+  EnforcedLastArgumentHashStyle: ignore_implicit
+
+Layout/LineEndStringConcatenationIndentation:
+  EnforcedStyle: indented
+
+Layout/LineLength:
+  Max: 80
+  IgnoreCopDirectives: true
+  IgnoredPatterns:
+    - '^\s*# '
+  Exclude:
+    - config/initializers/new_framework_defaults_7_0.rb
+    - test/components/previews/**/*
+
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
+
+# Gives false positives when methods take an array literal as the first argument
+Layout/SpaceBeforeBrackets:
+  Enabled: false
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - "**/*_spec.rb"
+    - spec/support/*
+
+Metrics/BlockLength:
+  Exclude:
+    - Guardfile
+    - config/environments/*
+    - config/routes.rb
+    - spec/**/*_spec.rb
+    - spec/support/*_shared_examples.rb
+
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/*.rb
+    - test/components/previews/**/*
+
+Style/BlockDelimiters:
+  EnforcedStyle: braces_for_chaining
+  Exclude:
+    - spec/features/*_spec.rb # within doesn't work with braces
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/EmptyMethod:
+  EnforcedStyle: expanded
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Style/FormatStringToken:
+  Exclude:
+    - config/routes.rb
+
+Style/StringLiterals:
+  Exclude:
+    - config/importmap.rb # generated file
+    - lib/tasks/*.rake
+    - spec/**/*_spec.rb
+    - spec/support/*_shared_examples.rb
+
+Style/TrailingCommaInArguments:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+Style/TrailingCommaInHashLiteral:
+  EnforcedStyleForMultiline: comma
