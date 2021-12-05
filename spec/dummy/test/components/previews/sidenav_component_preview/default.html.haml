@@ -1,0 +1,40 @@
+%a{:href => "https://designsystem.digital.gov/components/sidenav/"}
+  See on USWDS
+.grid-row.grid-gap
+  .tablet:grid-col-4
+    %h6.usa-heading-alt
+      Single level
+    = render UswdsComponents::SidenavComponent.new do
+      = render UswdsComponents::SidenavComponent::Item.new(href: request.path, name: 'Current page')
+      = render UswdsComponents::SidenavComponent::Item.new(href: '#parent', name: 'Parent link')
+      = render UswdsComponents::SidenavComponent::Item.new(href: '#parent', name: 'Parent link')
+
+  .tablet:grid-col-4
+    %h6.usa-heading-alt
+      Two levels
+    = render UswdsComponents::SidenavComponent.new do
+      = render UswdsComponents::SidenavComponent::Item.new(href: '#parent', name: 'Parent link')
+      = render UswdsComponents::SidenavComponent::Item.new(href: request.path, name: 'Current page') do
+        = render UswdsComponents::SidenavComponent::Item.new(href: '#child', name: 'Child link')
+        = render UswdsComponents::SidenavComponent::Item.new(href: '#child', name: 'Child link')
+        = render UswdsComponents::SidenavComponent::Item.new(href: '#child', name: 'Child link')
+        = render UswdsComponents::SidenavComponent::Item.new(href: '#child', name: 'Child link')
+        = render UswdsComponents::SidenavComponent::Item.new(href: request.path, name: 'Child link')
+      = render UswdsComponents::SidenavComponent::Item.new(href: '#child', name: 'Parent link')
+
+  .tablet:grid-col-4
+    %h6.usa-heading-alt
+      Three levels
+    = render UswdsComponents::SidenavComponent.new do
+      = render UswdsComponents::SidenavComponent::Item.new(href: '#parent', name: 'Parent link')
+      = render UswdsComponents::SidenavComponent::Item.new(href: request.path, name: 'Current page') do
+        = render UswdsComponents::SidenavComponent::Item.new(href: '#child', name: 'Child link')
+        = render UswdsComponents::SidenavComponent::Item.new(href: '#child', name: 'Child link')
+        = render UswdsComponents::SidenavComponent::Item.new(href: '#child', name: 'Child link') do
+          = render UswdsComponents::SidenavComponent::Item.new(href: '#grandchild', name: 'Grandchild link')
+          = render UswdsComponents::SidenavComponent::Item.new(href: '#grandchild', name: 'Grandchild link')
+          = render UswdsComponents::SidenavComponent::Item.new(href: request.path, name: 'Grandchild link')
+        = render UswdsComponents::SidenavComponent::Item.new(href: '#child', name: 'Child link')
+        = render UswdsComponents::SidenavComponent::Item.new(href: '#child', name: 'Child link')
+        = render UswdsComponents::SidenavComponent::Item.new(href: '#child', name: 'Child link')
+      = render UswdsComponents::SidenavComponent::Item.new(href: '#child', name: 'Parent link')
