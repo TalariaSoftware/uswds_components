@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title Dummy
+    = csrf_meta_tags
+    = csp_meta_tag
+
+    %link{rel: :stylesheet, href: 'https://cdn.jsdelivr.net/npm/uswds@2.12.1/dist/css/uswds.min.css', integrity: 'sha256-js2K73974dgJOOiJGfBzHfEYX5yutD4VR1s8I1Roz/w=', crossorigin: :anonymous}
+    %script{src: 'https://cdn.jsdelivr.net/npm/uswds@2.12.1/dist/js/uswds-init.min.js', integrity: 'sha256-s8ivtssrvlThzW9kP7IobVBTgrj2tXanipFmUrGRadE=', crossorigin: :anonymous}
+
+    = stylesheet_link_tag "application"
+  %body
+    = yield
+    %script{src: 'https://cdn.jsdelivr.net/npm/uswds@2.12.1/dist/js/uswds.min.js', integrity: 'sha256-8ndlefxQ1e+TR4mTn3tEbxa8Wz34XMaO1baXvBaGZa4=', crossorigin: :anonymous}
