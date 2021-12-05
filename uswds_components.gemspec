@@ -8,6 +8,7 @@ Gem::Specification.new do |spec|
   spec.homepage    = 'https://github.com/TalariaSoftware/uswds_components'
   spec.summary     = 'Rails view components for the USWDS design system'
   spec.description = 'Rails view components for the USWDS design system' # TODO
+  spec.license     = 'Hippocratic-3.0'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the "allowed_push_host"
   # to allow pushing to a single host or delete this section to allow pushing to any host.
@@ -33,6 +34,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'brakeman'
   spec.add_development_dependency 'bundler-audit'
   spec.add_development_dependency 'capybara'
+  spec.add_development_dependency 'license_finder'
   spec.add_development_dependency 'puma'
   spec.add_development_dependency 'rspec-rails'
   spec.add_development_dependency 'rubocop'

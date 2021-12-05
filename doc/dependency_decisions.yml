@@ -1,0 +1,62 @@
+---
+- - :permit
+  - MIT
+  - &1
+    :who:
+    :why:
+    :versions: []
+    :when: 2021-12-05 18:58:56.433281000 Z
+- - :permit
+  - ruby
+  - *1
+- - :permit
+  - Apache 2.0
+  - *1
+- - :permit
+  - ISC
+  - *1
+- - :permit
+  - BSD
+  - *1
+- - :permit
+  - Simplified BSD
+  - *1
+- - :permit
+  - New BSD
+  - *1
+- - :permit
+  - BSD-3-Clause
+  - *1
+- - :permit
+  - 0BSD
+  - *1
+- - :permit
+  - Unlicense
+  - *1
+- - :permit
+  - CC0-1.0
+  - *1
+- - :permit
+  - CC-BY-3.0
+  - *1
+- - :permit
+  - CC-BY-4.0
+  - *1
+- - :permit
+  - WTFPL
+  - *1
+- - :permit
+  - Brakeman Public Use License
+  - *1
+- - :approve
+  - bundler-audit
+  - :who:
+    :why:
+    :versions: []
+    :when: 2021-12-05 18:59:16.395039000 Z
+- - :permit
+  - Hippocratic-3.0
+  - :who:
+    :why:
+    :versions: []
+    :when: 2021-12-05 19:01:36.278778000 Z
