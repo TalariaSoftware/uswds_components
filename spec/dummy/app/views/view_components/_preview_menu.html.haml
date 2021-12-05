@@ -1,0 +1,11 @@
+%aside.sidenav
+  = render UswdsComponents::SidenavComponent.new do
+    = render UswdsComponents::SidenavComponent::Item.new(href: preview_view_components_path, name: 'View Components')
+    - previews.each do |preview|
+      - if preview.examples.one?
+        = render UswdsComponents::SidenavComponent::Item.new(href: preview_view_component_path("#{preview.preview_name}/#{preview.examples.first}"), name: preview.preview_name.titleize)
+      - else
+        = render UswdsComponents::SidenavComponent::Item.new(href: preview_view_component_path("#{preview.preview_name}"), name: preview.preview_name.titleize) do
+          - if request.path.include? preview.preview_name
+            - preview.examples.each do |example|
+              = render UswdsComponents::SidenavComponent::Item.new(href: preview_view_component_path("#{preview.preview_name}/#{example}"), name: example)

@@ -10,5 +10,12 @@
 
     = stylesheet_link_tag "application"
   %body
-    = yield
+    .grid-container
+      .grid-row
+        .tablet:grid-col-auto.margin-y-2.margin-right-3
+          = render partial: 'preview_menu', locals: {previews: ViewComponent::Preview.all}
+
+        .tablet:grid-col-fill
+          %h1= @preview.preview_name.camelize if @preview
+          = yield
     %script{:crossorigin => "anonymous", :integrity => "sha256-bEODhV4qVg5PIbshplXC76WhJoADh8mVW2WkWQQbYFg=", :src => "https://cdn.jsdelivr.net/npm/uswds@2.12.2/dist/js/uswds.js"}
