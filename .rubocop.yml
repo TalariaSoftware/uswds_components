@@ -2,8 +2,9 @@ AllCops:
   NewCops: enable
   Exclude:
     - bin/*
-    - config.ru
-    - db/schema.rb
+    - spec/dummy/bin/*
+    - spec/dummy/config.ru
+    - spec/dummy/db/schema.rb
 
 Style/Documentation:
   Enabled: false
@@ -39,7 +40,6 @@ Layout/SpaceBeforeBrackets:
 Lint/AmbiguousBlockAssociation:
   Exclude:
     - "**/*_spec.rb"
-    - spec/support/*
 
 Metrics/BlockLength:
   Exclude:

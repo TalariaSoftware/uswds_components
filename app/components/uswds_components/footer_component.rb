@@ -4,8 +4,10 @@ module UswdsComponents
       attr_accessor :primary_links, :contact_links, :logo
 
       renders_one :logo, 'UswdsComponents::FooterComponent::Logo'
-      renders_many :primary_links, 'UswdsComponents::FooterComponent::PrimaryLink'
-      renders_many :contact_links, 'UswdsComponents::FooterComponent::ContactLink'
+      renders_many :primary_links,
+        'UswdsComponents::FooterComponent::PrimaryLink'
+      renders_many :contact_links,
+        'UswdsComponents::FooterComponent::ContactLink'
     end
 
     class Logo < ViewComponent::Base

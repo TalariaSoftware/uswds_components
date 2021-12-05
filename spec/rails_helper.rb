@@ -3,7 +3,9 @@ require 'spec_helper'
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path('dummy/config/environment', __dir__)
 # Prevent database truncation if the environment is production
-abort("The Rails environment is running in production mode!") if Rails.env.production?
+if Rails.env.production?
+  abort('The Rails environment is running in production mode!')
+end
 require 'rspec/rails'
 require 'view_component/test_helpers'
 require 'capybara/rspec'
@@ -22,7 +24,10 @@ require 'capybara/rspec'
 # directory. Alternatively, in the individual `*_spec.rb` files, manually
 # require only the support files necessary.
 #
-Dir[UswdsComponents::Engine.root.join('spec', 'support', '**', '*.rb')].sort.each { |f| require f }
+Dir[UswdsComponents::Engine.root.join('spec', 'support', '**',
+  '*.rb')].sort.each do |f|
+  require f
+end
 
 # Checks for pending migrations and applies them before tests are run.
 # If you are not using ActiveRecord, you can remove these lines.

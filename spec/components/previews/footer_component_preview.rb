@@ -8,7 +8,8 @@ class FooterComponentPreview < ViewComponent::Preview
       footer.primary_link(href: '#', name: 'Primary Link')
 
       footer.contact_link(href: 'tel:1-800-555-5555', name: '(800) CALL-GOVT')
-      footer.contact_link(href: 'mailto:info@agency.gov', name: 'info@agency.gov')
+      footer.contact_link(href: 'mailto:info@agency.gov',
+        name: 'info@agency.gov')
     end
   end
 end
