@@ -8,3 +8,11 @@ load 'rails/tasks/statistics.rake'
 require 'bundler/gem_tasks'
 
 Dir.glob('tasks/*.rake').each { |r| import r }
+
+task default: %i[
+  rubocop
+  spec
+  license_finder
+  brakeman:check
+  bundle:audit
+]
