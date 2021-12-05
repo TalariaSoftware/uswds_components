@@ -343,7 +343,7 @@ RSpec.describe UswdsComponents::HeaderComponent, type: :component do
       it "changes when the title changes" do
         expect {
           component.title = "Something new"
-        }.to change { component.submenu_id }
+        }.to change(component, :submenu_id)
       end
     end
   end

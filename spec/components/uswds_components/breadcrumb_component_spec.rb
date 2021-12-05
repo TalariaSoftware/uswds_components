@@ -42,7 +42,7 @@ RSpec.describe UswdsComponents::BreadcrumbComponent, type: :component do
 
   describe UswdsComponents::BreadcrumbComponent::Crumb, type: :component do
     subject(:component) do
-      UswdsComponents::BreadcrumbComponent::Crumb.new(name: 'Hello',
+      described_class.new(name: 'Hello',
         href: '/fake/path')
     end
 

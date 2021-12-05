@@ -1,3 +1,6 @@
+require:
+  - rubocop-rspec
+
 AllCops:
   NewCops: enable
   Exclude:
@@ -53,6 +56,9 @@ Metrics/MethodLength:
   Exclude:
     - db/migrate/*.rb
     - test/components/previews/**/*
+
+RSpec/NestedGroups:
+  Max: 4
 
 Style/BlockDelimiters:
   EnforcedStyle: braces_for_chaining

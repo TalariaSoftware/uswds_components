@@ -185,6 +185,9 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.14.0)
       parser (>= 3.0.1.1)
+    rubocop-rspec (2.4.0)
+      rubocop (~> 1.0)
+      rubocop-ast (>= 1.1.0)
     ruby-progressbar (1.11.0)
     ruby_parser (3.18.1)
       sexp_processor (~> 4.16)
@@ -221,6 +224,7 @@ DEPENDENCIES
   puma
   rspec-rails
   rubocop
+  rubocop-rspec
   sqlite3
   uswds_components!
 
