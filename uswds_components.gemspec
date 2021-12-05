@@ -30,6 +30,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'rails', '~> 7.0.0.alpha2'
   spec.add_dependency 'view_component'
 
+  spec.add_development_dependency 'bundler-audit'
   spec.add_development_dependency 'capybara'
   spec.add_development_dependency 'puma'
   spec.add_development_dependency 'rspec-rails'
