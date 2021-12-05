@@ -79,28 +79,11 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    capybara-console (0.0.4)
-      capybara
-      rails (>= 3.0)
-    capybara-rails (0.0.2)
-      capybara
-      capybara-console
-      database_cleaner
-      exception_notification
     concurrent-ruby (1.1.9)
     crass (1.0.6)
-    database_cleaner (2.0.1)
-      database_cleaner-active_record (~> 2.0.0)
-    database_cleaner-active_record (2.0.1)
-      activerecord (>= 5.a)
-      database_cleaner-core (~> 2.0.0)
-    database_cleaner-core (2.0.1)
     diff-lcs (1.4.4)
     erubi (1.10.0)
     erubis (2.7.0)
-    exception_notification (4.4.3)
-      actionmailer (>= 4.0, < 7)
-      activesupport (>= 4.0, < 7)
     globalid (1.0.0)
       activesupport (>= 5.0)
     haml (5.2.2)
@@ -215,7 +198,7 @@ PLATFORMS
   arm64-darwin-21
 
 DEPENDENCIES
-  capybara-rails
+  capybara
   puma
   rspec-rails
   sqlite3
