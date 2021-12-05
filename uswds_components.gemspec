@@ -28,7 +28,7 @@ Gem::Specification.new do |spec|
   spec.required_ruby_version = '>=2.5'
 
   spec.add_dependency 'haml-rails'
-  spec.add_dependency 'rails', '~> 7.0.0.alpha2'
+  spec.add_dependency 'rails', '>= 6.1'
   spec.add_dependency 'view_component'
 
   spec.add_development_dependency 'brakeman'

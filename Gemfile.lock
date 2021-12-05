@@ -3,7 +3,7 @@ PATH
   specs:
     uswds_components (0.1.0)
       haml-rails
-      rails (~> 7.0.0.alpha2)
+      rails (>= 6.1)
       view_component
 
 GEM
