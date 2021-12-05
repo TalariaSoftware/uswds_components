@@ -1,5 +1,6 @@
+# rubocop:disable Layout/LineLength
 class CollectionComponentPreview < ViewComponent::Preview
-  def calendar_display
+  def calendar_display # rubocop:disable Metrics/MethodLength
     render UswdsComponents::CollectionComponent.new do |collection|
       collection.item(datetime: '2020-09-30T12:00:00+01:00',
         href: 'https://www.performance.gov/presidents-winners-press-release/') do |item|
@@ -23,7 +24,7 @@ class CollectionComponentPreview < ViewComponent::Preview
     end
   end
 
-  def headings_only
+  def headings_only # rubocop:disable Metrics/MethodLength
     render UswdsComponents::CollectionComponent.new do |collection|
       collection.item(href: 'https://digital.gov/guides/mobile-principles/?dg') do |item|
         item.header { 'The eight principles of mobile-friendliness' }
@@ -51,3 +52,4 @@ class CollectionComponentPreview < ViewComponent::Preview
     end
   end
 end
+# rubocop:enable Layout/LineLength

@@ -15,10 +15,14 @@ Gem::Specification.new do |spec|
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/TalariaSoftware/uswds_components'
-  spec.metadata['changelog_uri'] = 'https://github.com/TalariaSoftware/uswds_components/commits/main' # Put your gem's CHANGELOG.md URL here."
+
+  # Put your gem's CHANGELOG.md URL here."
+  spec.metadata['changelog_uri'] = 'https://github.com/TalariaSoftware/uswds_components/commits/main'
 
   spec.files = Dir['{app,config,db,lib}/**/*', 'LICENSE.md', 'Rakefile',
     'README.md']
+
+  spec.required_ruby_version = '>=2.5'
 
   spec.add_dependency 'haml-rails'
   spec.add_dependency 'rails', '~> 7.0.0.alpha2'

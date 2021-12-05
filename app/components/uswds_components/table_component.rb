@@ -1,7 +1,7 @@
 module UswdsComponents
   class TableComponent < ViewComponent::Base
-    attr_accessor :id, :caption, :header_rows, :body_rows, :striped, :borderless,
-      :stacked, :stacked_header
+    attr_accessor :id, :caption, :header_rows, :body_rows, :striped,
+      :borderless, :stacked, :stacked_header
 
     def initialize(id: nil, striped: false, borderless: false, stacked: false,
       stacked_header: false)
