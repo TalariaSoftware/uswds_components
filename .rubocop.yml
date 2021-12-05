@@ -46,6 +46,7 @@ Lint/AmbiguousBlockAssociation:
 
 Metrics/BlockLength:
   Exclude:
+    - "*.gemspec"
     - Guardfile
     - config/environments/*
     - config/routes.rb
