@@ -340,10 +340,15 @@ RSpec.describe UswdsComponents::HeaderComponent, type: :component do
     end
 
     describe "#submenu_id" do
-      it "changes when the title changes" do
-        expect {
-          component.title = "Something new"
-        }.to change(component, :submenu_id)
+      let(:other_component) do
+        described_class.new(
+          title: "Map",
+          items: [submenu_item],
+        )
+      end
+
+      it "is different for different components" do
+        expect(component.submenu_id).not_to eq(other_component.submenu_id)
       end
     end
   end

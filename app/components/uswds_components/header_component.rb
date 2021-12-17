@@ -83,7 +83,7 @@ module UswdsComponents
       end
 
       def submenu_id
-        Digest::SHA1.hexdigest title.to_s
+        @submenu_id ||= "usa-nav__submenu_#{object_id.to_s(36)}"
       end
     end
 
