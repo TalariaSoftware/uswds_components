@@ -5,8 +5,8 @@
     = csrf_meta_tags
     = csp_meta_tag
 
-    %link{:crossorigin => "anonymous", :href => "https://cdn.jsdelivr.net/npm/uswds@2.12.2/dist/css/uswds.min.css", :integrity => "sha256-w12xmKFX1Bd0luZZr1hehpfX9EgyX9C6QTaKTZGDduE=", :rel => "stylesheet"}/
-    %script{:crossorigin => "anonymous", :integrity => "sha256-9lfV7p6SwtVd8y52fTGAaNFu+rQGUEYODsI5fDErBEI=", :src => "https://cdn.jsdelivr.net/npm/uswds@2.12.2/dist/js/uswds-init.js"}
+    %link{crossorigin: 'anonymous', href: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/css/uswds.min.css', integrity: 'sha256-6ZoI2WgL6VJKEfe5qQALzkObY0bqZvN/wAgkjgFtD/o=', rel: 'stylesheet'}
+    %script{crossorigin: :anonymous, integrity: 'sha256-s8ivtssrvlThzW9kP7IobVBTgrj2tXanipFmUrGRadE=', src: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/js/uswds-init.min.js'}
 
     = stylesheet_link_tag "application"
   %body
@@ -18,4 +18,4 @@
         .tablet:grid-col-fill
           %h1= @preview.preview_name.camelize if @preview
           = yield
-    %script{:crossorigin => "anonymous", :integrity => "sha256-bEODhV4qVg5PIbshplXC76WhJoADh8mVW2WkWQQbYFg=", :src => "https://cdn.jsdelivr.net/npm/uswds@2.12.2/dist/js/uswds.js"}
+%script{crossorigin: :anonymous, integrity: 'sha256-wFSqIde7dSXUsICyl/9wZcm9Cer7aPhCloW7nMjsvPs=', src: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/js/uswds.min.js'}
