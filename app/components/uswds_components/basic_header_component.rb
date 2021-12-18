@@ -30,7 +30,7 @@ module UswdsComponents
       renders_many :submenu_items,
         'UswdsComponents::BasicHeaderComponent::SubmenuItem'
 
-      def initialize(title: '', href: '/', current: false)
+      def initialize(title: '', href: '', current: false)
         super
         @title = title
         @href = href

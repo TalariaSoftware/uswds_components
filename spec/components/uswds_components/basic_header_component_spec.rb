@@ -44,7 +44,23 @@ RSpec.describe UswdsComponents::BasicHeaderComponent, type: :component do
       end
     end
 
-    describe '#current' do
+    describe '#href' do
+      subject(:href) { component.href }
+
+      context "when given" do
+        let(:component) { described_class.new(href: '/given_value') }
+
+        it { is_expected.to eq('/given_value') }
+      end
+
+      context "when not given" do
+        let(:component) { described_class.new }
+
+        it { is_expected.to be_blank }
+      end
+    end
+
+    describe '#current?' do
       before { render_inline(component) }
 
       context "when current is set to true" do
