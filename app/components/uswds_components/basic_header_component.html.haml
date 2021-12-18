@@ -1,0 +1,12 @@
+%header.usa-header.usa-header--basic
+  .usa-nav-container
+    .usa-navbar
+      = logo
+      %button.usa-menu-btn Menu
+    %nav.usa-nav{aria: {label: "Primary navigation"}}
+      %button.usa-nav__close
+        %img{alt: 'Close', role: :img, src: close_image}
+      %ul.usa-nav__primary.usa-accordion
+        - primary_items.each do |item|
+          = item
+      = content
