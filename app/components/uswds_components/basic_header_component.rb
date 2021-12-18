@@ -27,7 +27,8 @@ module UswdsComponents
     class PrimaryItem < ViewComponent::Base
       attr_accessor :title, :href
 
-      renders_many :submenu_items, 'UswdsComponents::BasicHeaderComponent::SubmenuItem'
+      renders_many :submenu_items,
+        'UswdsComponents::BasicHeaderComponent::SubmenuItem'
 
       def initialize(title: '', href: '/', current: false)
         super

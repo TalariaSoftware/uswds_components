@@ -32,7 +32,7 @@ Layout/LineLength:
     - '^\s*# '
   Exclude:
     - config/initializers/new_framework_defaults_7_0.rb
-    - test/components/previews/**/*
+    - spec/components/previews/**/*
 
 Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
@@ -52,12 +52,13 @@ Metrics/BlockLength:
     - config/environments/*
     - config/routes.rb
     - spec/**/*_spec.rb
+    - spec/components/previews/**/*
     - spec/support/*_shared_examples.rb
 
 Metrics/MethodLength:
   Exclude:
     - db/migrate/*.rb
-    - test/components/previews/**/*
+    - spec/components/previews/**/*
 
 RSpec/NestedGroups:
   Max: 4

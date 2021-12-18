@@ -3,7 +3,6 @@ class BasicHeaderComponentPreview < ViewComponent::Preview
     render UswdsComponents::BasicHeaderComponent.new(
       image_path: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/img',
     ) do |header|
-
       header.logo(href: '#', title: 'Project Title')
 
       header.primary_item(title: 'Current Section', current: true) do |item|
