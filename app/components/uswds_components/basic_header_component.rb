@@ -41,7 +41,7 @@ module UswdsComponents
         @submenu_id ||= "usa-nav__submenu_#{object_id.to_s(36)}"
       end
 
-      def current
+      def current?
         @current || current_page?(href)
       end
     end

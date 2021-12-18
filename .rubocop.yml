@@ -61,7 +61,7 @@ Metrics/MethodLength:
     - spec/components/previews/**/*
 
 RSpec/NestedGroups:
-  Max: 4
+  Max: 5
 
 Style/BlockDelimiters:
   EnforcedStyle: braces_for_chaining
