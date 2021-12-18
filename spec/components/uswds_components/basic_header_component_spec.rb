@@ -56,6 +56,15 @@ RSpec.describe UswdsComponents::BasicHeaderComponent, type: :component do
       context "when current is not assigned" do
         let(:component) { described_class.new(href: '/link_path') }
 
+        context 'when the link points to the current page' do
+          before do
+            allow_any_instance_of(ActionView::Helpers::UrlHelper) # rubocop:disable RSpec/AnyInstance
+              .to receive(:current_page?).with('/link_path').and_return(true)
+          end
+
+          it { is_expected.to be_current }
+        end
+
         context 'when the link does not point to the current page' do
           before do
             allow_any_instance_of(ActionView::Helpers::UrlHelper) # rubocop:disable RSpec/AnyInstance
@@ -65,13 +74,10 @@ RSpec.describe UswdsComponents::BasicHeaderComponent, type: :component do
           it { is_expected.not_to be_current }
         end
 
-        context 'when the link points to the current page' do
-          before do
-            allow_any_instance_of(ActionView::Helpers::UrlHelper) # rubocop:disable RSpec/AnyInstance
-              .to receive(:current_page?).with('/link_path').and_return(true)
-          end
+        context 'when the link is blank' do
+          let(:component) { described_class.new(href: '') }
 
-          it { is_expected.to be_current }
+          it { is_expected.not_to be_current }
         end
       end
     end

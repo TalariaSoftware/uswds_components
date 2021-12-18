@@ -42,7 +42,10 @@ module UswdsComponents
       end
 
       def current?
-        @current || current_page?(href)
+        return true if @current
+        return false if href.blank?
+
+        current_page?(href)
       end
     end
 
