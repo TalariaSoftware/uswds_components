@@ -1,4 +1,4 @@
-class CollectionComponentPreview < ViewComponent::Preview
+class UswdsComponents::CollectionComponentPreview < ViewComponent::Preview
   def calendar_display
     render UswdsComponents::CollectionComponent.new do |collection|
       collection.item(datetime: '2020-09-30T12:00:00+01:00',

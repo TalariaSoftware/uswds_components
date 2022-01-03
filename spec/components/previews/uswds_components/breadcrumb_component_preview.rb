@@ -1,4 +1,4 @@
-class BreadcrumbComponentPreview < ViewComponent::Preview
+class UswdsComponents::BreadcrumbComponentPreview < ViewComponent::Preview
   def default
     render UswdsComponents::BreadcrumbComponent.new do |trail|
       trail.crumb(href: '#home', name: 'Home')

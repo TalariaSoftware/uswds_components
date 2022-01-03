@@ -1,4 +1,4 @@
-class BasicHeaderComponentPreview < ViewComponent::Preview
+class UswdsComponents::BasicHeaderComponentPreview < ViewComponent::Preview
   def default
     render UswdsComponents::BasicHeaderComponent.new(
       image_path: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/img',

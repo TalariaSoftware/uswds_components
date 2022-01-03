@@ -1,4 +1,4 @@
-class AlertComponentPreview < ViewComponent::Preview
+class UswdsComponents::AlertComponentPreview < ViewComponent::Preview
   def info
     render UswdsComponents::AlertComponent.new(status: :info,
       heading: 'Informative status') do
@@ -14,8 +14,7 @@ class AlertComponentPreview < ViewComponent::Preview
   end
 
   def error
-    render UswdsComponents::AlertComponent.new(status: :error,
-      heading: 'Error status') do
+    render UswdsComponents::AlertComponent.new(status: :error, heading: 'Error status') do
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'
     end
   end
