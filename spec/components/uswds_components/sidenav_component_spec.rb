@@ -5,8 +5,8 @@ RSpec.describe UswdsComponents::SidenavComponent, type: :component do
   subject(:component) { described_class.new }
 
   def render_component
-    render_inline(component) do
-      '<li>an item</li>'
+    render_inline(component) do |nav|
+      nav.item href: '/path', name: 'an item'
     end
   end
 
@@ -27,7 +27,7 @@ RSpec.describe UswdsComponents::SidenavComponent, type: :component do
 
   it "includes the list content" do
     render_component
-    expect(page.find('ul')).to have_content('<li>an item</li>')
+    expect(page.find('ul li')).to have_content('an item')
   end
 
   describe UswdsComponents::SidenavComponent::Item, type: :component do

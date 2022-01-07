@@ -1,3 +1,4 @@
 %nav{"aria-label" => "Secondary navigation"}
   %ul.usa-sidenav
-    = content
+    - items.each do |item|
+      = item
