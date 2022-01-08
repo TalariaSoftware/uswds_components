@@ -39,4 +39,30 @@ class UswdsComponents::BasicHeaderComponentPreview < ViewComponent::Preview
       </form>')
     end
   end
+
+  def with_button
+    render UswdsComponents::BasicHeaderComponent.new(
+      image_path: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/img',
+    ) do |header|
+      header.logo(href: '#', title: 'Project Title')
+
+      header.primary_item(title: 'Current Section', current: true) do |item|
+        item.submenu_item(href: '', name: 'Navigation link')
+        item.submenu_item(href: '', name: 'Navigation link')
+        item.submenu_item(href: '', name: 'Navigation link')
+      end
+
+      header.primary_item(href: '#', title: 'Simple link')
+
+      header.primary_item do
+        raw('
+          <form>
+            <button class="width-full">
+              Sign out
+            </button>
+          </form>
+        ')
+      end
+    end
+  end
 end
