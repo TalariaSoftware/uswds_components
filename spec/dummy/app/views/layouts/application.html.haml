@@ -15,7 +15,7 @@
         .tablet:grid-col-auto.margin-y-2.margin-right-3
           = render partial: 'preview_menu', locals: {previews: ViewComponent::Preview.all}
 
-        .tablet:grid-col-fill
+        %main.tablet:grid-col-fill
           %h1= @preview.preview_name.camelize if @preview
           = yield
-%script{crossorigin: :anonymous, integrity: 'sha256-wFSqIde7dSXUsICyl/9wZcm9Cer7aPhCloW7nMjsvPs=', src: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/js/uswds.min.js'}
+  %script{crossorigin: :anonymous, integrity: 'sha256-wFSqIde7dSXUsICyl/9wZcm9Cer7aPhCloW7nMjsvPs=', src: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/js/uswds.min.js'}

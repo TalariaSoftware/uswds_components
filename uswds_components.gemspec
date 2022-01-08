@@ -34,6 +34,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'brakeman'
   spec.add_development_dependency 'bundler-audit'
   spec.add_development_dependency 'capybara'
+  spec.add_development_dependency 'debug'
   spec.add_development_dependency 'license_finder'
   spec.add_development_dependency 'puma'
   spec.add_development_dependency 'rspec-rails'
