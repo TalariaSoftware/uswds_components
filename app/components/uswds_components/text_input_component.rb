@@ -4,7 +4,7 @@ module UswdsComponents
 
     delegate :present?, to: :errors, prefix: true
 
-    def initialize(form:, attribute:, input_options: {})
+    def initialize(form:, attribute:, input_options: {}, success: false)
       super
       @form = form
       @attribute = attribute
@@ -12,6 +12,7 @@ module UswdsComponents
 
       input_options['class'] = ['usa-input']
       input_options['class'] << 'usa-input--error' if errors_present?
+      input_options['class'] << 'usa-input--success' if success
     end
 
     def errors

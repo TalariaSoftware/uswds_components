@@ -56,16 +56,22 @@ RSpec.describe UswdsComponents::TextInputComponent, type: :component do
   describe "input classes" do
     subject(:input_classes) { component.input_options['class'] }
 
-    context "when the object does not have errors" do
-      let(:object) { Article.new }
+    let(:object) { Article.new }
 
-      it { is_expected.to match_array(['usa-input']) }
-    end
+    it { is_expected.to match_array(['usa-input']) }
 
     context "when the object has errors on the field" do
       let(:object) { Article.new.tap(&:valid?) }
 
       it { is_expected.to match_array(['usa-input', 'usa-input--error']) }
+    end
+
+    context "with the success option" do
+      let(:component) do
+        described_class.new form: form, attribute: attribute, success: true
+      end
+
+      it { is_expected.to match_array(['usa-input', 'usa-input--success']) }
     end
   end
 end

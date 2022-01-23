@@ -7,4 +7,7 @@ class UswdsComponents::TextInputComponentPreview < ViewComponent::Preview
 
   def with_options
   end
+
+  def with_success
+  end
 end
