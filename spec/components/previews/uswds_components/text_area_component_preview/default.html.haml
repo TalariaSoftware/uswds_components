@@ -1,4 +1,4 @@
-- @article = Article.new
+- article = UswdsComponents::TextAreaComponentPreview::Article.new
 
-= form_for @article, html: {class: 'usa-form usa-form--large margin-x-auto'} do |f|
+= form_for article, url: '#', html: {class: 'usa-form'} do |f|
     = render UswdsComponents::TextAreaComponent.new(form: f, attribute: :body)

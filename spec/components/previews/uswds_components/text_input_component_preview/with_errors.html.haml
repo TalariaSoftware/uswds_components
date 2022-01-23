@@ -1,5 +1,5 @@
-- @article = Article.new
-- @article.valid?
+- article = UswdsComponents::TextInputComponentPreview::Article.new
+- article.valid?
 
-= form_for @article, html: {class: 'usa-form usa-form--large margin-x-auto'} do |f|
-    = render UswdsComponents::TextInputComponent.new(form: f, attribute: :title)
+= form_for article, url: '#', html: {class: 'usa-form'} do |f|
+  = render UswdsComponents::TextInputComponent.new(form: f, attribute: :title)
