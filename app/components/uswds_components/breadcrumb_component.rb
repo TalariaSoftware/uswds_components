@@ -17,6 +17,18 @@ module UswdsComponents
         @href = href
         @name = name
       end
+
+      def current?
+        return false if href.blank?
+
+        current_page? href
+      end
+
+      def linked?
+        return false if href.blank?
+
+        !current?
+      end
     end
   end
 end

@@ -50,6 +50,69 @@ RSpec.describe UswdsComponents::BreadcrumbComponent, type: :component do
       render_inline(component)
     end
 
+    describe '#current?' do
+      subject(:component) do
+        described_class.new(name: "Hello", href: component_path)
+      end
+
+      before do
+        allow(request).to receive(:path).and_return(current_path)
+        render_component
+      end
+
+      context "when the component matches the request path" do
+        let(:current_path) { '/current/path' }
+        let(:component_path) { '/current/path' }
+
+        it { is_expected.to be_current }
+      end
+
+      context "when the component path does not match the request path" do
+        let(:current_path) { '/current/path' }
+        let(:component_path) { '/diff/path' }
+
+        it { is_expected.not_to be_current }
+      end
+
+      context "when the component path is blank and current is root" do
+        let(:current_path) { '/' }
+        let(:component_path) { '' }
+
+        it { is_expected.not_to be_current }
+      end
+    end
+
+    describe '#linked?' do
+      subject(:component) do
+        described_class.new(name: "Hello", href: component_path)
+      end
+
+      let(:current_path) { '/current/path' }
+
+      before do
+        allow(request).to receive(:path).and_return(current_path)
+        render_component
+      end
+
+      context "when it points to a differnt page" do
+        let(:component_path) { '/diff/path' }
+
+        it { is_expected.to be_linked }
+      end
+
+      context "when it points to the current page" do
+        let(:component_path) { '/current/path' }
+
+        it { is_expected.not_to be_linked }
+      end
+
+      context "when it points nowhere" do
+        let(:component_path) { '' }
+
+        it { is_expected.not_to be_linked }
+      end
+    end
+
     it "has a list item with a link and span inside" do
       render_component
       expect(page).to have_selector('li a span')
@@ -99,6 +162,22 @@ RSpec.describe UswdsComponents::BreadcrumbComponent, type: :component do
       it "doesn't have a link" do
         render_component
         expect(page).to have_no_link
+      end
+    end
+
+    context "when the link url is blank" do
+      subject(:component) do
+        described_class.new(name: 'Hello', href: '')
+      end
+
+      it "has a list item with a span inside (no link)" do
+        render_component
+        expect(page).to have_selector('li span')
+      end
+
+      it "doesn't have a link" do
+        render_component
+        expect(page).not_to have_selector('a')
       end
     end
   end
