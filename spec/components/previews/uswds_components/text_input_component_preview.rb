@@ -12,6 +12,9 @@ class UswdsComponents::TextInputComponentPreview < ViewComponent::Preview
   def default
   end
 
+  def with_hint
+  end
+
   def with_errors
   end
 

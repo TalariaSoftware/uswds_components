@@ -1,5 +1,7 @@
 %div{:class => ('usa-form-group usa-form-group--error' if errors_present?)}
   = form.label attribute, class: label_classes
+  - if hint_present?
+    %span.usa-hint= hint
   - errors.each do |error|
     %span.usa-error-message= error.full_message
   = form.text_field attribute, input_options

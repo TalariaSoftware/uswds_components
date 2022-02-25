@@ -85,4 +85,24 @@ RSpec.describe UswdsComponents::TextInputComponent, type: :component do
       it { is_expected.to match_array(['usa-input', 'usa-input--success']) }
     end
   end
+
+  describe "#hint" do
+    subject { component.hint }
+
+    context "when no hint is given" do
+      let(:component) do
+        described_class.new form: form, attribute: :title
+      end
+
+      it { is_expected.to be_blank }
+    end
+
+    context "when a hint is given" do
+      let(:component) do
+        described_class.new form: form, attribute: :title, hint: 'plastics'
+      end
+
+      it { is_expected.to eq('plastics') }
+    end
+  end
 end
