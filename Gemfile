@@ -5,7 +5,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 gemspec
 
 gem 'sqlite3', group: :development
-gem 'pg', group: :production
+group :production do
+  gem 'pg'
+  gem 'puma'
+end
 
 # Start debugger with binding.b -- Read more: https://github.com/ruby/debug
 # gem "debug", ">= 1.0.0", group: %i[ development test ]
