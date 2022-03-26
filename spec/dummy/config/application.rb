@@ -11,18 +11,9 @@ module Dummy
   class Application < Rails::Application
     config.load_defaults Rails::VERSION::STRING.to_f
 
-    # For compatibility with applications that use this config
-    config.action_controller.include_all_helpers = false
-
-    # Configuration for the application, engines, and railties goes here.
-    #
-    # These settings can be overridden in specific environments using the files
-    # in config/environments, which are processed later.
-    #
-    # config.time_zone = "Central Time (US & Canada)"
-    # config.eager_load_paths << Rails.root.join("extras")
-
     config.view_component.default_preview_layout = 'application'
+    config.view_component.show_previews = true
+    config.view_component.show_previews_source = true
     config.view_component.preview_paths <<
       UswdsComponents::Engine.root.join('spec/components/previews')
   end
