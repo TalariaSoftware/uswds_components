@@ -57,35 +57,35 @@ RSpec.describe UswdsComponents::FooterComponent, type: :component do
       expect(page).to have_selector('footer.usa-footer--slim')
     end
 
-    xdescribe "return to top" do
-      it "has a return to top section" do
-        render_component
-        expect(page).to have_selector('footer > div.usa-footer__return-to-top')
-      end
-
-      it "is a grid" do
-        render_component
-        expect(page)
-          .to have_selector('.usa-footer__return-to-top.grid-container')
-      end
-
-      it "has a link" do
-        render_component
-        expect(page).to have_selector('.usa-footer__return-to-top a')
-      end
-
-      it "links to the top" do
-        render_component
-        expect(page)
-          .to have_selector('.usa-footer__return-to-top a[href="#what"]')
-      end
-
-      it "says it links to the top" do
-        render_component
-        expect(page.find('.usa-footer__return-to-top a'))
-          .to have_content('Return to top')
-      end
-    end
+    # describe "return to top" do
+    #   it "has a return to top section" do
+    #     render_component
+    #     expect(page).to have_selector('footer > div.usa-footer__return-to-top')
+    #   end
+    #
+    #   it "is a grid" do
+    #     render_component
+    #     expect(page)
+    #       .to have_selector('.usa-footer__return-to-top.grid-container')
+    #   end
+    #
+    #   it "has a link" do
+    #     render_component
+    #     expect(page).to have_selector('.usa-footer__return-to-top a')
+    #   end
+    #
+    #   it "links to the top" do
+    #     render_component
+    #     expect(page)
+    #       .to have_selector('.usa-footer__return-to-top a[href="#what"]')
+    #   end
+    #
+    #   it "says it links to the top" do
+    #     render_component
+    #     expect(page.find('.usa-footer__return-to-top a'))
+    #       .to have_content('Return to top')
+    #   end
+    # end
 
     describe "primary section" do
       it "has a primary section" do
