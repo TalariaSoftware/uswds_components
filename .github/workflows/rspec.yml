@@ -1,4 +1,4 @@
-name: RSpec
+name: Specifications
 
 on:
   push:
@@ -13,9 +13,11 @@ jobs:
         ruby-version: ['2.7', '3.0', '3.1']
     steps:
     - uses: actions/checkout@v3
+      name: Checkout repository
     - uses: ruby/setup-ruby@v1
+      name: Setup ruby
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true
-    - name: RSpec
-      run: bundle exec rspec
+    - run: bundle exec rspec
+      name: Run specs
