@@ -1,4 +1,7 @@
-![Spec suite](https://github.com/TalariaSoftware/uswds_components/actions/workflows/ruby.yml/badge.svg)
+![RSpec](https://github.com/TalariaSoftware/uswds_components/actions/workflows/rspec.yml/badge.svg)
+![Rubocop](https://github.com/TalariaSoftware/uswds_components/actions/workflows/rubocop.yml/badge.svg)
+![Brakeman](https://github.com/TalariaSoftware/uswds_components/actions/workflows/brakeman.yml/badge.svg)
+![Bundler audit](https://github.com/TalariaSoftware/uswds_components/actions/workflows/bundler-audit.yml/badge.svg)
 ![CodeQL Analysis](https://github.com/TalariaSoftware/uswds_components/actions/workflows/codeql-analysis.yml/badge.svg)
 
 # USWDS Components
