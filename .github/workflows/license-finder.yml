@@ -1,0 +1,19 @@
+name: License Finder
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+      name: Checkout repository
+    - uses: ruby/setup-ruby@v1
+      name: Setup ruby
+      with:
+        ruby-version: 3.1
+        bundler-cache: true
+    - run: bundle exec license_finder
+      name: Run license finder
