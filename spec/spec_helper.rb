@@ -1,6 +1,8 @@
 require 'simplecov'
 require 'simplecov_json_formatter'
-SimpleCov.start
+SimpleCov.start do
+  add_filter 'spec/support/match_html_fragment'
+end
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
