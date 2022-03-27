@@ -1,11 +1,11 @@
-name: Ruby static analysis
+name: Brakeman
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
 jobs:
-  rspec:
+  test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3

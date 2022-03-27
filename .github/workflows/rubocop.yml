@@ -1,11 +1,11 @@
-name: Ruby linter
+name: Rubocop
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
 jobs:
-  rspec:
+  check:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3

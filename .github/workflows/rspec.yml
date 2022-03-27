@@ -1,4 +1,4 @@
-name: Specifications
+name: RSpec
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main ]
 jobs:
-  rspec:
+  test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
