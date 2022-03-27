@@ -1,4 +1,5 @@
 require 'simplecov'
+require 'simplecov_json_formatter'
 SimpleCov.start
 
 RSpec.configure do |config|
