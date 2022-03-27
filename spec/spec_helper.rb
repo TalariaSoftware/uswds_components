@@ -2,6 +2,7 @@ require 'simplecov'
 require 'simplecov_json_formatter'
 SimpleCov.start do
   add_filter 'spec/support/match_html_fragment'
+  enable_coverage :branch
 end
 
 RSpec.configure do |config|
