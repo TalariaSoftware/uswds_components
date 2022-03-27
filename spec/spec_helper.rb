@@ -5,6 +5,7 @@ SimpleCov.start do
   add_filter 'spec/dummy/config'
   enable_coverage :branch
 end
+SimpleCov.minimum_coverage line: 99, branch: 99
 
 RSpec.configure do |config|
   config.expect_with :rspec do |expectations|
