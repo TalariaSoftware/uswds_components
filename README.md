@@ -1,3 +1,6 @@
+![Spec suite](https://github.com/TalariaSoftware/uswds_components/actions/workflows/ruby.yml/badge.svg)
+![CodeQL Analysis](https://github.com/TalariaSoftware/uswds_components/actions/workflows/codeql-analysis.yml/badge.svg)
+
 # USWDS Components
 
 Implementation of the [US Web Design System
