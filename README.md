@@ -93,6 +93,19 @@ config.view_component.preview_paths <<
 Then start the app and access the resulting previews at:
 http://localhost:3000/rails/view_components.
 
+## Example use
+
+### Dummy app
+
+Go to [uswdscomponents.herokuapp.com](https://uswdscomponents.herokuapp.com/) to
+see previews of USWDS components.
+
+### NCMS
+
+[NCMS](https://ncmanager.org) is an app built with USWDS components. [NCMS view
+components previews](https://ncmanager.org/rails/view_components) provide
+examples of how to build specialized view components using USWDS components.
+
 ## Contributing
 
 This project is intended to be a safe, welcoming space for collaboration.
