@@ -24,10 +24,6 @@ RSpec.describe UswdsComponents::TextInputComponent, type: :component do
 
   let(:input_classes) { component.input_options['class'] }
 
-  def render_component
-    render_inline(component)
-  end
-
   describe "#errors_present?" do
     context "when the object does not have errors" do
       let(:object) { article_class.new }

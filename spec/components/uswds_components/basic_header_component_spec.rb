@@ -4,12 +4,6 @@ require 'rails_helper'
 RSpec.describe UswdsComponents::BasicHeaderComponent, type: :component do
   subject(:component) { described_class.new }
 
-  def render_component
-    render_inline(component) do
-      "the content".html_safe
-    end
-  end
-
   describe '#close_image' do
     subject(:close_image) { component.close_image }
 
