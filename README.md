@@ -1,10 +1,11 @@
-![RSpec](https://github.com/TalariaSoftware/uswds_components/actions/workflows/rspec.yml/badge.svg)
-![Rubocop](https://github.com/TalariaSoftware/uswds_components/actions/workflows/rubocop.yml/badge.svg)
-![Brakeman](https://github.com/TalariaSoftware/uswds_components/actions/workflows/brakeman.yml/badge.svg)
-![Bundler audit](https://github.com/TalariaSoftware/uswds_components/actions/workflows/bundler-audit.yml/badge.svg)
-![CodeQL Analysis](https://github.com/TalariaSoftware/uswds_components/actions/workflows/codeql-analysis.yml/badge.svg)
+[![RSpec](https://github.com/TalariaSoftware/uswds_components/actions/workflows/rspec.yml/badge.svg)](https://github.com/TalariaSoftware/uswds_components/actions/workflows/rspec.yml)
+[![Rubocop](https://github.com/TalariaSoftware/uswds_components/actions/workflows/rubocop.yml/badge.svg)](https://github.com/TalariaSoftware/uswds_components/actions/workflows/rubocop.yml)
+[![Brakeman](https://github.com/TalariaSoftware/uswds_components/actions/workflows/brakeman.yml/badge.svg)(https://github.com/TalariaSoftware/uswds_components/actions/workflows/brakeman.yml)
+[![Bundler audit](https://github.com/TalariaSoftware/uswds_components/actions/workflows/bundler-audit.yml/badge.svg)]](https://github.com/TalariaSoftware/uswds_components/actions/workflows/bundler-audit.yml)
+[![CodeQL analysis](https://github.com/TalariaSoftware/uswds_components/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/TalariaSoftware/uswds_components/actions/workflows/codeql-analysis.yml)
+
 [![Maintainability](https://api.codeclimate.com/v1/badges/709db7ad26975dcf8a91/maintainability)](https://codeclimate.com/github/TalariaSoftware/uswds_components/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/709db7ad26975dcf8a91/test_coverage)](https://codeclimate.com/github/TalariaSoftware/uswds_components/test_coverage)
+[![Test coverage](https://api.codeclimate.com/v1/badges/709db7ad26975dcf8a91/test_coverage)](https://codeclimate.com/github/TalariaSoftware/uswds_components/test_coverage)
 
 # USWDS Components
 
