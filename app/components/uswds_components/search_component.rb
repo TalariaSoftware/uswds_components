@@ -1,16 +1,19 @@
 module UswdsComponents
   class SearchComponent < ViewComponent::Base
-    attr_accessor :form_options, :query_field_id, :query_param, :submit_icon,
+    attr_accessor :form_options, :query_param, :submit_icon,
       :size
 
-    def initialize(form_options: { url: '' }, query_field_id: :query,
-      query_param: :q, submit_icon: '', size: :default)
+    def initialize(form_options: { url: '' }, query_param: :q, submit_icon: '',
+      size: :default)
       super
       @form_options = form_options
-      @query_field_id = query_field_id
       @query_param = query_param
       @submit_icon = submit_icon
       @size = size
+    end
+
+    def query_field_id
+      @query_field_id ||= "query_field_id_#{object_id.to_s(36)}"
     end
 
     def small?

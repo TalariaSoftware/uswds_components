@@ -22,16 +22,14 @@ RSpec.describe UswdsComponents::SearchComponent, type: :component do
   end
 
   describe '#query_field_id' do
-    subject { component.query_field_id }
+    let(:other_component) { described_class.new }
 
-    context "when no field id is given" do
-      it { is_expected.to eq(:query) }
+    it "is intelligible" do
+      expect(component.query_field_id).to start_with('query_field_id')
     end
 
-    context "when a field id is given" do
-      let(:component) { described_class.new(query_field_id: :search_phrase) }
-
-      it { is_expected.to eq(:search_phrase) }
+    it "is different for different components" do
+      expect(component.query_field_id).not_to eq(other_component.query_field_id)
     end
   end
 
