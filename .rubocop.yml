@@ -28,7 +28,7 @@ Layout/LineEndStringConcatenationIndentation:
 Layout/LineLength:
   Max: 80
   IgnoreCopDirectives: true
-  IgnoredPatterns:
+  AllowedPatterns:
     - '^\s*# '
   Exclude:
     - config/initializers/new_framework_defaults_7_0.rb
