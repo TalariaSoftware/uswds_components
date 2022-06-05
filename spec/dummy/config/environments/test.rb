@@ -1,4 +1,5 @@
 require 'active_support/core_ext/integer/time'
+require 'html-proofer'
 
 # The test environment is used exclusively to run your application's
 # test suite. You never need to work with it otherwise. Remember that
@@ -53,8 +54,28 @@ Rails.application.configure do
   config.active_support.disallowed_deprecation_warnings = []
 
   # Raises error for missing translations.
-  # config.i18n.raise_on_missing_translations = true
+  config.i18n.raise_on_missing_translations = true
+
+  HTMLProofer::Middleware.options[:cache] = { timeframe: '30d' }
+  HTMLProofer::Middleware.options[:check_html] = true
+  HTMLProofer::Middleware.options[:check_external_hash] = false
+  HTMLProofer::Middleware.options[:check_img_http] = true
+  HTMLProofer::Middleware.options[:check_sri] = true
+  HTMLProofer::Middleware.options[:empty_alt_ignore] = true
+  HTMLProofer::Middleware.options[:enforce_https] = true
+  HTMLProofer::Middleware.options[:url_ignore] = [%r{^/}]
+  HTMLProofer::Middleware.options[:validation] = {
+    report_eof_tags: true,
+    report_invalid_tags: true,
+    report_mismatched_tags: true,
+    report_missing_doctype: true,
+    report_missing_names: true,
+    report_script_embeds: true,
+  }
+
+  config.middleware.use HTMLProofer::Middleware
 
   # Annotate rendered view with file names.
   # config.action_view.annotate_rendered_view_with_filenames = true
+  HTMLProofer::Middleware.options[:ignore_missing_alt] = true
 end
