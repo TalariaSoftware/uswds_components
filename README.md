@@ -1,5 +1,7 @@
 [![RSpec](https://github.com/TalariaSoftware/uswds_components/actions/workflows/rspec.yml/badge.svg)](https://github.com/TalariaSoftware/uswds_components/actions/workflows/rspec.yml)
 [![Rubocop](https://github.com/TalariaSoftware/uswds_components/actions/workflows/rubocop.yml/badge.svg)](https://github.com/TalariaSoftware/uswds_components/actions/workflows/rubocop.yml)
+[![HAML-Lint](https://github.com/TalariaSoftware/uswds_components/actions/workflows/haml-lint.yml/badge.svg)](https://github.com/TalariaSoftware/uswds_components/actions/workflows/haml-lint.yml)
+
 [![Brakeman](https://github.com/TalariaSoftware/uswds_components/actions/workflows/brakeman.yml/badge.svg)](https://github.com/TalariaSoftware/uswds_components/actions/workflows/brakeman.yml)
 [![Bundler audit](https://github.com/TalariaSoftware/uswds_components/actions/workflows/bundler-audit.yml/badge.svg)](https://github.com/TalariaSoftware/uswds_components/actions/workflows/bundler-audit.yml)
 [![CodeQL analysis](https://github.com/TalariaSoftware/uswds_components/actions/workflows/codeql-analysis.yml/badge.svg)](https://github.com/TalariaSoftware/uswds_components/actions/workflows/codeql-analysis.yml)
