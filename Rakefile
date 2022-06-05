@@ -11,6 +11,7 @@ Dir.glob('tasks/*.rake').each { |r| import r }
 
 task default: %i[
   rubocop
+  app:haml_lint
   spec
   license_finder
   brakeman:check
