@@ -31,6 +31,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'rails', '>= 6.1.4.1'
   spec.add_dependency 'view_component'
 
+  spec.add_development_dependency 'appraisal'
   spec.add_development_dependency 'brakeman'
   spec.add_development_dependency 'bundler-audit'
   spec.add_development_dependency 'capybara'
