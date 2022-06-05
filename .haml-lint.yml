@@ -1,0 +1,5 @@
+linters:
+  ConsecutiveSilentScripts:
+    exclude: spec/components/**/*
+  SpaceInsideHashAttributes:
+    style: no_space

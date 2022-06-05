@@ -1,4 +1,5 @@
 - article = UswdsComponents::TextAreaComponentPreview::Article.new
 
-= form_for article, url: '#', html: {class: 'usa-form'} do |f|
-    = render UswdsComponents::TextAreaComponent.new(form: f, attribute: :body, input_options: {required: true, autofocus: true})
+= form_for article, url: '#', html: { class: 'usa-form' } do |f|
+  = render UswdsComponents::TextAreaComponent.new(form: f, attribute: :body,
+    input_options: { required: true, autofocus: true })

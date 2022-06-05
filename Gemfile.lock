@@ -106,12 +106,20 @@ GEM
     haml (5.2.2)
       temple (>= 0.8.0)
       tilt
+    haml-lint (0.999.999)
+      haml_lint
     haml-rails (2.0.1)
       actionpack (>= 5.1)
       activesupport (>= 5.1)
       haml (>= 4.0.6, < 6.0)
       html2haml (>= 1.0.1)
       railties (>= 5.1)
+    haml_lint (0.40.0)
+      haml (>= 4.0, < 5.3)
+      parallel (~> 1.10)
+      rainbow
+      rubocop (>= 0.50.0)
+      sysexits (~> 1.1)
     html2haml (2.2.0)
       erubis (~> 2.7.0)
       haml (>= 4.0, < 6)
@@ -244,6 +252,7 @@ GEM
     simplecov_json_formatter (0.1.4)
     sqlite3 (1.4.2)
     strscan (3.0.3)
+    sysexits (1.2.0)
     temple (0.8.2)
     thor (1.2.1)
     tilt (2.0.10)
@@ -274,6 +283,7 @@ DEPENDENCIES
   bundler-audit
   capybara
   debug
+  haml-lint
   license_finder
   pg
   puma

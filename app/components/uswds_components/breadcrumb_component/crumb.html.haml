@@ -1,4 +1,4 @@
-%li{:class => "usa-breadcrumb__list-item #{current? ? "usa-current" : ""}"}
+%li{class: "usa-breadcrumb__list-item #{current? ? 'usa-current' : ''}"}
   - if linked?
     = link_to href, class: 'usa-breadcrumb__link' do
       %span= name

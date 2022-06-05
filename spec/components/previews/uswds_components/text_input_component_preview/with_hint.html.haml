@@ -1,4 +1,5 @@
 - article = UswdsComponents::TextInputComponentPreview::Article.new
 
-= form_for article, url: '#', html: {class: 'usa-form'} do |f|
-  = render UswdsComponents::TextInputComponent.new(form: f, attribute: :title, hint: "Choose something descriptive")
+= form_for article, url: '#', html: { class: 'usa-form' } do |f|
+  = render UswdsComponents::TextInputComponent.new(form: f, attribute: :title,
+    hint: 'Choose something descriptive')

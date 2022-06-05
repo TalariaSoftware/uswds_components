@@ -1,8 +1,8 @@
 %li.usa-collection__item
   - if datetime.present?
-    -#= link_to href, class: "usa-collection__calendar-date" do
+    -# = link_to href, class: "usa-collection__calendar-date" do
     .usa-collection__calendar-date{href: href}
-      %time{:datetime => "#{datetime.iso8601}"}
+      %time{datetime: datetime.iso8601}
         %span.usa-collection__calendar-date-month
           = datetime.strftime '%^b'
         %span.usa-collection__calendar-date-day
@@ -10,7 +10,7 @@
 
   .usa-collection__body
     %h3.usa-collection__heading
-      = link_to href, class: "usa-link" do
+      = link_to href, class: 'usa-link' do
         = header
     - if content.present?
       %p.usa-collection__description

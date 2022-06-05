@@ -5,17 +5,25 @@
     = csrf_meta_tags
     = csp_meta_tag
 
-    %link{crossorigin: 'anonymous', href: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/css/uswds.min.css', integrity: 'sha256-6ZoI2WgL6VJKEfe5qQALzkObY0bqZvN/wAgkjgFtD/o=', rel: 'stylesheet'}
-    %script{crossorigin: :anonymous, integrity: 'sha256-s8ivtssrvlThzW9kP7IobVBTgrj2tXanipFmUrGRadE=', src: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/js/uswds-init.min.js'}
+    %link{crossorigin: 'anonymous',
+    href: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/css/uswds.min.css',
+    integrity: 'sha256-6ZoI2WgL6VJKEfe5qQALzkObY0bqZvN/wAgkjgFtD/o=',
+    rel: 'stylesheet'}
+    %script{crossorigin: :anonymous,
+    integrity: 'sha256-s8ivtssrvlThzW9kP7IobVBTgrj2tXanipFmUrGRadE=',
+    src: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/js/uswds-init.min.js'}
 
-    = stylesheet_link_tag "application"
+    = stylesheet_link_tag 'application'
   %body
     .grid-container
       .grid-row
         .tablet:grid-col-auto.margin-y-2.margin-right-3
-          = render partial: 'preview_menu', locals: {previews: ViewComponent::Preview.all}
+          = render partial: 'preview_menu',
+            locals: { previews: ViewComponent::Preview.all }
 
         %main.tablet:grid-col-fill
-          %h1= @preview.preview_name.camelize if @preview
+          %h1= @preview&.preview_name&.camelize
           = yield
-  %script{crossorigin: :anonymous, integrity: 'sha256-wFSqIde7dSXUsICyl/9wZcm9Cer7aPhCloW7nMjsvPs=', src: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/js/uswds.min.js'}
+  %script{crossorigin: :anonymous,
+  integrity: 'sha256-wFSqIde7dSXUsICyl/9wZcm9Cer7aPhCloW7nMjsvPs=',
+  src: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/js/uswds.min.js'}

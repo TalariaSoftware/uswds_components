@@ -2,7 +2,10 @@
   = render UswdsComponents::SidenavComponent.new do |nav|
     = nav.item(href: preview_view_components_path, name: 'View Components')
     - previews.each do |preview|
-      = nav.item(href: preview_view_component_path(preview.preview_name), name: preview.preview_name.titleize) do |subnav|
+      = nav.item(href: preview_view_component_path(preview.preview_name),
+        name: preview.preview_name.titleize) do |subnav|
         - if request.path.include? preview.preview_name
           - preview.examples.each do |example|
-            = subnav.item(href: preview_view_component_path("#{preview.preview_name}/#{example}"), name: example)
+            - component_name = "#{preview.preview_name}/#{example}"
+            - path = preview_view_component_path(component_name)
+            = subnav.item(href: path, name: example)

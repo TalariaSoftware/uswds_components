@@ -6,7 +6,9 @@
       = link_to href, class: ['usa-nav__link', ('usa-current' if current?)] do
         %span= title
   - else
-    %button.usa-accordion__button.usa-nav__link{class: ('usa-current' if current?), aria: {expanded: 'false', controls: submenu_id}}
+    %button.usa-accordion__button.usa-nav__link{
+    class: ('usa-current' if current?),
+    aria: { expanded: 'false', controls: submenu_id }}
       %span= title
     %ul.usa-nav__submenu{id: submenu_id}
       - submenu_items.each do |item|

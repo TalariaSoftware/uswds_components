@@ -1,4 +1,5 @@
-%div{:class => "usa-alert usa-alert--#{status}#{heading.present? ? "" : " usa-alert--slim"}#{include_icon ? "" : " usa-alert--no-icon"}"}
+-# haml-lint:disable LineLength
+%div{class: "usa-alert usa-alert--#{status}#{heading.present? ? '' : ' usa-alert--slim'}#{include_icon ? '' : ' usa-alert--no-icon'}"}
   .usa-alert__body
     - if heading.present?
       %h3.usa-alert__heading= heading

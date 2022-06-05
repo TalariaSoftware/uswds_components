@@ -1,4 +1,4 @@
-%div{:class => ('usa-form-group usa-form-group--error' if errors_present?)}
+%div{class: ('usa-form-group usa-form-group--error' if errors_present?)}
   = form.label attribute, class: label_classes
   - if hint_present?
     %span.usa-hint= hint
