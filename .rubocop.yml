@@ -6,6 +6,7 @@ AllCops:
   NewCops: enable
   Exclude:
     - bin/*
+    - gemfiles/*
     - spec/dummy/bin/*
     - spec/dummy/config.ru
     - spec/dummy/db/schema.rb
