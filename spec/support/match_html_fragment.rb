@@ -66,7 +66,7 @@ module MatchHtmlFragment
       expected.attributes.each_key do |key|
         if expected.attributes[key].value != actual.attributes[key].value
           return fail(
-            "Expected #{key} to be '#{expected.attributes[key].value}. "\
+            "Expected #{key} to be '#{expected.attributes[key].value}. " \
               "Got '#{actual.attributes[key].value}' instead.",
             expected,
           )
@@ -85,7 +85,7 @@ module MatchHtmlFragment
       return true if expected_content.strip == actual_content.strip
 
       fail(
-        "Expected content '#{expected_content}'. "\
+        "Expected content '#{expected_content}'. " \
           "Got '#{actual_content}' instead.",
         expected,
       )
@@ -98,7 +98,7 @@ module MatchHtmlFragment
       return true if expected_count == actual_count
 
       fail(
-        "Expected #{expected_count} children. "\
+        "Expected #{expected_count} children. " \
           "Got #{actual_count} instead.",
         expected,
       )

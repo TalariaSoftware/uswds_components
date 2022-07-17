@@ -116,7 +116,7 @@ RSpec.describe UswdsComponents::FooterComponent, type: :component do
       it "has a footer nav" do
         render_component
         expect(page).to have_selector(
-          '.usa-footer__primary-container > .mobile-lg\:grid-col-8 '\
+          '.usa-footer__primary-container > .mobile-lg\:grid-col-8 ' \
             'nav.usa-footer__nav',
         )
       end
@@ -145,7 +145,7 @@ RSpec.describe UswdsComponents::FooterComponent, type: :component do
       it "has a footer address" do
         render_component
         expect(page).to have_selector(
-          '.usa-footer__primary-container div.mobile-lg\:grid-col-4 '\
+          '.usa-footer__primary-container div.mobile-lg\:grid-col-4 ' \
             'address.usa-footer__address',
         )
       end
