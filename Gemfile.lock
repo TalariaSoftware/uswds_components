@@ -136,6 +136,7 @@ GEM
       haml (>= 4.0, < 6)
       nokogiri (>= 1.6.0)
       ruby_parser (~> 3.5)
+    htmlbeautifier (1.4.2)
     i18n (1.12.0)
       concurrent-ruby (~> 1.0)
     io-console (0.5.11)
@@ -149,9 +150,21 @@ GEM
       tomlrb (>= 1.3, < 2.1)
       with_env (= 1.1.0)
       xml-simple (~> 1.1.9)
+    listen (3.7.1)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.18.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
+    lookbook (0.9.1)
+      actioncable
+      htmlbeautifier (~> 1.3)
+      listen (~> 3.0)
+      railties (>= 5.0)
+      redcarpet (~> 3.5)
+      rouge (~> 3.26)
+      view_component (~> 2.0)
+      yard (~> 0.9.25)
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.2)
@@ -218,10 +231,15 @@ GEM
       zeitwerk (~> 2.5)
     rainbow (3.1.1)
     rake (13.0.6)
+    rb-fsevent (0.11.1)
+    rb-inotify (0.10.1)
+      ffi (~> 1.0)
+    redcarpet (3.5.1)
     regexp_parser (2.5.0)
     reline (0.3.1)
       io-console (~> 0.5)
     rexml (3.2.5)
+    rouge (3.29.0)
     rspec-core (3.11.0)
       rspec-support (~> 3.11.0)
     rspec-expectations (3.11.0)
@@ -280,6 +298,7 @@ GEM
     view_component (2.59.0)
       activesupport (>= 5.0.0, < 8.0)
       method_source (~> 1.0)
+    webrick (1.7.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -288,6 +307,8 @@ GEM
       rexml
     xpath (3.2.0)
       nokogiri (~> 1.8)
+    yard (0.9.28)
+      webrick (~> 1.7.0)
     yell (2.2.2)
     zeitwerk (2.6.0)
 
@@ -303,6 +324,7 @@ DEPENDENCIES
   haml-lint
   html-proofer (~> 3)
   license_finder
+  lookbook
   pg
   puma
   rspec-rails

@@ -17,12 +17,8 @@
   %body
     .grid-container
       .grid-row
-        .tablet:grid-col-auto.margin-y-2.margin-right-3
-          = render partial: 'preview_menu',
-            locals: { previews: ViewComponent::Preview.all }
-
         %main.tablet:grid-col-fill
-          %h1= @preview&.preview_name&.camelize
+          %h1= @preview&.name
           = yield
     %script{crossorigin: :anonymous,
     integrity: 'sha256-wFSqIde7dSXUsICyl/9wZcm9Cer7aPhCloW7nMjsvPs=',

@@ -4,14 +4,17 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # Specify your gem's dependencies in uswds_components.gemspec.
 gemspec
 
-gem 'sqlite3', group: :development
+gem 'lookbook'
 
-gem 'simplecov', require: false, group: :test
+group :development do
+  gem 'sqlite3'
+end
+
+group :test do
+  gem 'simplecov', require: false
+end
 
 group :production do
   gem 'pg'
   gem 'puma'
 end
-
-# Start debugger with binding.b -- Read more: https://github.com/ruby/debug
-# gem "debug", ">= 1.0.0", group: %i[ development test ]

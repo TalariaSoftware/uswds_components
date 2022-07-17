@@ -19,22 +19,14 @@ class UswdsComponents::BasicHeaderComponentPreview < ViewComponent::Preview
 
       header.primary_item(href: '#', title: 'Simple link')
 
-      raw('<form class="usa-search usa-search--small" role="search">
+      raw('
+      <form class="usa-search usa-search--small" role="search">
         <label class="usa-sr-only" for="basic-search-field-en-small">
           Search
         </label>
-        <input
-          class="usa-input"
-          id="basic-search-field-en-small"
-          type="search"
-          name="search"
-        />
+        <input class="usa-input" id="basic-search-field-en-small" type="search" name="search"/>
         <button class="usa-button" type="submit">
-          <img
-            src="https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/img/usa-icons-bg/search--white.svg"
-            class="usa-search__submit-icon"
-            alt="Search"
-          />
+          <img src="https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/img/usa-icons-bg/search--white.svg" class="usa-search__submit-icon" alt="Search"/>
         </button>
       </form>')
     end
