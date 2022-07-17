@@ -67,7 +67,7 @@ RSpec.describe UswdsComponents::SidenavComponent, type: :component do
 
       it "is the current list item" do
         render_component
-        expect(page).to have_css('a.usa-current')
+        expect(page).to have_link(class: 'usa-current')
       end
     end
   end

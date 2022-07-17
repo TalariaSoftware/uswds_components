@@ -130,7 +130,7 @@ RSpec.describe UswdsComponents::BreadcrumbComponent, type: :component do
 
     it "has a breadcrumb link" do
       render_component
-      expect(page).to have_css('a.usa-breadcrumb__link')
+      expect(page).to have_link(class: 'usa-breadcrumb__link')
     end
 
     context "when the link is not to the current page" do
@@ -177,7 +177,7 @@ RSpec.describe UswdsComponents::BreadcrumbComponent, type: :component do
 
       it "doesn't have a link" do
         render_component
-        expect(page).not_to have_selector('a')
+        expect(page).not_to have_link
       end
     end
   end

@@ -301,7 +301,7 @@ RSpec.describe UswdsComponents::FooterComponent, type: :component do
 
     it "has the href" do
       render_component
-      expect(page).to have_selector('a[href="/fake/path"]')
+      expect(page).to have_link(href: '/fake/path')
     end
 
     it "has the name" do
@@ -334,7 +334,7 @@ RSpec.describe UswdsComponents::FooterComponent, type: :component do
 
     it "has the href" do
       render_component
-      expect(page).to have_selector('a[href="tel:311"]')
+      expect(page).to have_link(href: 'tel:311')
     end
 
     it "has the name" do
