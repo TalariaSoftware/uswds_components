@@ -1,5 +1,5 @@
 class UswdsComponents::TableComponentPreview < ViewComponent::Preview
-  DEFAULT_INNER_HTML = <<~HTML
+  DEFAULT_INNER_HTML = <<~HTML.freeze
     <caption>
       A table shows information in columns and rows.
     </caption>
