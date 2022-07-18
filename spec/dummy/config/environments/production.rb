@@ -116,6 +116,4 @@ Rails.application.configure do
   config.lookbook.listen = true
   # enable runtime preview parsing
   config.lookbook.runtime_parsing = true
-  # Lookbook doesn't support or need source previews
-  config.view_component.show_previews_source = true
 end
