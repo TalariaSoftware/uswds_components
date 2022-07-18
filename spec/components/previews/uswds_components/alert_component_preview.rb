@@ -1,40 +1,20 @@
 class UswdsComponents::AlertComponentPreview < ViewComponent::Preview
-  def info
-    render UswdsComponents::AlertComponent.new(status: :info,
-      heading: 'Informative status') do
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'
-    end
-  end
-
-  def warning
-    render UswdsComponents::AlertComponent.new(status: :warning,
-      heading: 'Warning status') do
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'
-    end
-  end
-
-  def error
-    render UswdsComponents::AlertComponent.new(status: :error, heading: 'Error status') do
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'
-    end
-  end
-
-  def success
-    render UswdsComponents::AlertComponent.new(status: :success,
-      heading: 'Success status') do
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'
-    end
-  end
-
-  def slim
-    render UswdsComponents::AlertComponent.new do
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'
-    end
-  end
-
-  def no_icon
-    render UswdsComponents::AlertComponent.new(include_icon: false) do
-      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.'
+  # Alert Component
+  # ----------------
+  #
+  # [See at USWDS](https://designsystem.digital.gov/components/alert/)
+  #
+  # To create a slim alert, leave the heading blank.
+  #
+  # @param status [Symbol] select [info, warning, error, success]
+  # @param icon toggle
+  # @param heading
+  # @param body
+  def default(status: :info, icon: true, heading: 'Status heading',
+    body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.')
+    render UswdsComponents::AlertComponent.new(status: status, heading: heading,
+      include_icon: icon) do
+      body
     end
   end
 end
