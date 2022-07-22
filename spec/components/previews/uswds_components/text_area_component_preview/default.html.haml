@@ -1,4 +1,9 @@
-- article = UswdsComponents::TextAreaComponentPreview::Article.new
+-# haml-lint:disable LineLength
+- article = UswdsComponents::TextAreaComponentPreview::Article.new(body: params[:value])
+-# haml-lint:enable LineLength
+
+- article.errors.add(:body, params[:error1]) if params[:error1].present?
+- article.errors.add(:body, params[:error2]) if params[:error2].present?
 
 = form_for article, url: '#', html: { class: 'usa-form' } do |f|
   = render UswdsComponents::TextAreaComponent.new(form: f, attribute: :body)

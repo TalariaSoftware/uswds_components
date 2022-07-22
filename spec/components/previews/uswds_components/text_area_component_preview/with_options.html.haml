@@ -2,4 +2,4 @@
 
 = form_for article, url: '#', html: { class: 'usa-form' } do |f|
   = render UswdsComponents::TextAreaComponent.new(form: f, attribute: :body,
-    input_options: { required: true, autofocus: true })
+    input_options: { autofocus: true, placeholder: 'Once upon a time…' })

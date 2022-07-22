@@ -2,8 +2,8 @@
 - article = UswdsComponents::TextInputComponentPreview::Article.new(title: params[:value])
 -# haml-lint:enable LineLength
 
-- article.errors.add(:title, params[:error_1]) if params[:error_1].present?
-- article.errors.add(:title, params[:error_2]) if params[:error_2].present?
+- article.errors.add(:title, params[:error1]) if params[:error1].present?
+- article.errors.add(:title, params[:error2]) if params[:error2].present?
 
 = form_for article, url: '#', html: { class: 'usa-form' } do |f|
   = render UswdsComponents::TextInputComponent.new(form: f, attribute: :title,

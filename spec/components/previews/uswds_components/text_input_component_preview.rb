@@ -22,9 +22,9 @@ class UswdsComponents::TextInputComponentPreview < ViewComponent::Preview
   # @param hint
   # @param value
   # @param success toggle
-  # @param error_1
-  # @param error_2
-  def default(hint: '', value: '', success: nil, error_1: '', error_2: '')
+  # @param error1
+  # @param error2
+  def default(hint: '', value: '', success: nil, error1: '', error2: '')
   end
 
   # Text Input Component
