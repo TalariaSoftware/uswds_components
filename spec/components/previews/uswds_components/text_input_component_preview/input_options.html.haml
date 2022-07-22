@@ -2,4 +2,4 @@
 
 = form_for article, url: '#', html: { class: 'usa-form' } do |f|
   = render UswdsComponents::TextInputComponent.new(form: f, attribute: :title,
-    hint: 'Choose something descriptive')
+    input_options: { required: true, autofocus: true, placeholder: 'Untitled' })
