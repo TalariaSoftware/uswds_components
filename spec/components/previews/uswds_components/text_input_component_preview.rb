@@ -13,17 +13,18 @@ class UswdsComponents::TextInputComponentPreview < ViewComponent::Preview
   # ActiveModel object. In the preview example that is the `title` attribute of
   # an `Article` object.
   #
-  # The preview allows you to set an error
-  # [message](https://guides.rubyonrails.org/active_record_validations.html#errors-where-and-error-object)
-  # on the title attribute. But the component displays the error's [full
-  # message](https://api.rubyonrails.org/v7.0.3.1/classes/ActiveModel/Errors.html#method-i-full_message),
-  # which has the the attribute name prepended.
+  # The preview allows you to set error
+  # [messages](https://guides.rubyonrails.org/active_record_validations.html#errors-where-and-error-object)
+  # on the title attribute. But the component displays the [full
+  # message](https://api.rubyonrails.org/v7.0.3.1/classes/ActiveModel/Errors.html#method-i-full_message)
+  # of the errors. That is why the attribute name is prepended.
   #
   # @param hint
-  # @param success toggle
-  # @param error
   # @param value
-  def default(hint: '', error: '', value: '')
+  # @param success toggle
+  # @param error_1
+  # @param error_2
+  def default(hint: '', value: '', success: nil, error_1: '', error_2: '')
   end
 
   # Text Input Component
