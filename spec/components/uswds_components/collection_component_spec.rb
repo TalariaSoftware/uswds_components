@@ -30,7 +30,7 @@ RSpec.describe UswdsComponents::CollectionComponent, type: :component do
 
   it "matches the html" do
     render_component
-    expect(rendered_component).to match_html_fragment(expected_html)
+    expect(rendered_content).to match_html_fragment(expected_html)
   end
 
   describe UswdsComponents::CollectionComponent::Item do
@@ -61,7 +61,7 @@ RSpec.describe UswdsComponents::CollectionComponent, type: :component do
 
       it "matches the html" do
         render_component
-        expect(rendered_component).to match_html_fragment(expected_html)
+        expect(rendered_content).to match_html_fragment(expected_html)
       end
     end
 
@@ -93,7 +93,7 @@ RSpec.describe UswdsComponents::CollectionComponent, type: :component do
 
       it "matches the html" do
         render_component
-        expect(rendered_component).to match_html_fragment(expected_html)
+        expect(rendered_content).to match_html_fragment(expected_html)
       end
     end
 

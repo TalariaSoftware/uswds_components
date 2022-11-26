@@ -26,7 +26,7 @@ RSpec.describe UswdsComponents::AlertComponent, type: :component do
 
   it "matches the html" do
     render_component
-    expect(rendered_component).to match_html_fragment(info_alert)
+    expect(rendered_content).to match_html_fragment(info_alert)
   end
 
   it "is an alert" do

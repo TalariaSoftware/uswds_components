@@ -8,7 +8,7 @@ RSpec.describe UswdsComponents::TableComponent, type: :component do
   describe 'html' do
     subject(:html) do
       render_inline(component)
-      rendered_component
+      rendered_content
     end
 
     let(:component) { described_class.new }
