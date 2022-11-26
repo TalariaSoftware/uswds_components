@@ -254,12 +254,12 @@ RSpec.describe UswdsComponents::FooterComponent, type: :component do
 
       it "does not have multiple grid column" do
         render_component
-        expect(page).to have_no_selector('.grid-col-auto + .grid-col-auto')
+        expect(page).not_to have_selector('.grid-col-auto + .grid-col-auto')
       end
 
       it "does not contain a logo image" do
         render_component
-        expect(page).to have_no_css('img')
+        expect(page).not_to have_css('img')
       end
     end
   end

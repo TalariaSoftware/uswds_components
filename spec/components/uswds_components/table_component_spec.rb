@@ -14,7 +14,7 @@ RSpec.describe UswdsComponents::TableComponent, type: :component do
     let(:component) { described_class.new }
     let(:expected_html) do
       <<~HTML
-        <table class="usa-table">
+        <table id="" class="usa-table">
         </table>
       HTML
     end
@@ -29,7 +29,7 @@ RSpec.describe UswdsComponents::TableComponent, type: :component do
       let(:component) { described_class.new }
       let(:expected_html) do
         <<~HTML
-          <table class="usa-table">
+          <table id="" class="usa-table">
           </table>
         HTML
       end
@@ -41,7 +41,7 @@ RSpec.describe UswdsComponents::TableComponent, type: :component do
       let(:component) { described_class.new(striped: true) }
       let(:expected_html) do
         <<~HTML
-          <table class="usa-table usa-table--striped">
+          <table id="" class="usa-table usa-table--striped">
           </table>
         HTML
       end
@@ -53,7 +53,7 @@ RSpec.describe UswdsComponents::TableComponent, type: :component do
       let(:component) { described_class.new(borderless: true) }
       let(:expected_html) do
         <<~HTML
-          <table class="usa-table usa-table--borderless">
+          <table id="" class="usa-table usa-table--borderless">
           </table>
         HTML
       end
@@ -65,7 +65,7 @@ RSpec.describe UswdsComponents::TableComponent, type: :component do
       let(:component) { described_class.new(stacked: true) }
       let(:expected_html) do
         <<~HTML
-          <table class="usa-table usa-table--stacked">
+          <table id="" class="usa-table usa-table--stacked">
           </table>
         HTML
       end
@@ -77,7 +77,7 @@ RSpec.describe UswdsComponents::TableComponent, type: :component do
       let(:component) { described_class.new(stacked_header: true) }
       let(:expected_html) do
         <<~HTML
-          <table class="usa-table usa-table--stacked-header">
+          <table id="" class="usa-table usa-table--stacked-header">
           </table>
         HTML
       end

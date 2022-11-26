@@ -56,7 +56,7 @@ RSpec.describe UswdsComponents::SidenavComponent, type: :component do
 
       it "is not the current list item" do
         render_component
-        expect(page).to have_no_css('.usa-current')
+        expect(page).not_to have_css('.usa-current')
       end
     end
 

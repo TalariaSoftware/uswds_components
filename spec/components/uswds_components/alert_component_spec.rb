@@ -55,7 +55,7 @@ RSpec.describe UswdsComponents::AlertComponent, type: :component do
 
       it "does not include a heading" do
         render_component
-        expect(page).to have_no_selector('.usa-alert__heading')
+        expect(page).not_to have_selector('.usa-alert__heading')
       end
     end
 
@@ -128,7 +128,7 @@ RSpec.describe UswdsComponents::AlertComponent, type: :component do
 
       it "includes an icon" do
         render_component
-        expect(page).to have_no_selector('.usa-alert--no-icon')
+        expect(page).not_to have_selector('.usa-alert--no-icon')
       end
     end
 
@@ -137,7 +137,7 @@ RSpec.describe UswdsComponents::AlertComponent, type: :component do
 
       it "includes an icon" do
         render_component
-        expect(page).to have_no_selector('.usa-alert--no-icon')
+        expect(page).not_to have_selector('.usa-alert--no-icon')
       end
     end
 
