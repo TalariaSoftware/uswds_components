@@ -1,0 +1,15 @@
+= render UswdsComponents::PaginationComponent.new do
+  = render UswdsComponents::PaginationComponent::Previous.new(url: '#prev')
+  = render UswdsComponents::PaginationComponent::Page.new(url: '#page1',
+    index: 1)
+  = render UswdsComponents::PaginationComponent::Overflow.new
+  = render UswdsComponents::PaginationComponent::Page.new(url: '#page9',
+    index: 9)
+  = render UswdsComponents::PaginationComponent::Page.new(url: '#page10',
+    index: 10, current: true)
+  = render UswdsComponents::PaginationComponent::Page.new(url: '#page11',
+    index: 11)
+  = render UswdsComponents::PaginationComponent::Overflow.new
+  = render UswdsComponents::PaginationComponent::Page.new(url: '#page24',
+    index: 24)
+  = render UswdsComponents::PaginationComponent::Next.new(url: '#next')
