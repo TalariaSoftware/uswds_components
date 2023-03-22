@@ -30,17 +30,4 @@ Gem::Specification.new do |spec|
   spec.add_dependency 'haml-rails'
   spec.add_dependency 'rails', '>= 6.1.4.1'
   spec.add_dependency 'view_component'
-
-  spec.add_development_dependency 'brakeman'
-  spec.add_development_dependency 'bundler-audit'
-  spec.add_development_dependency 'capybara'
-  spec.add_development_dependency 'debug'
-  spec.add_development_dependency 'haml-lint'
-  # v4 doesn't support HTMLProofer::Middleware https://github.com/gjtorikian/html-proofer/pull/670
-  spec.add_development_dependency 'html-proofer', '~>3'
-  spec.add_development_dependency 'license_finder'
-  spec.add_development_dependency 'puma'
-  spec.add_development_dependency 'rspec-rails'
-  spec.add_development_dependency 'rubocop'
-  spec.add_development_dependency 'rubocop-rspec'
 end

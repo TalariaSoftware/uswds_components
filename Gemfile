@@ -6,6 +6,18 @@ gemspec
 
 gem 'lookbook'
 
+gem 'brakeman'
+gem 'bundler-audit'
+gem 'capybara'
+gem 'debug'
+gem 'haml-lint'
+gem 'html-proofer', '~>3' # v4 doesn't support HTMLProofer::Middleware https://github.com/gjtorikian/html-proofer/pull/670
+gem 'license_finder'
+gem 'puma'
+gem 'rspec-rails'
+gem 'rubocop'
+gem 'rubocop-rspec'
+
 group :development do
   gem 'sqlite3'
 end
@@ -16,5 +28,4 @@ end
 
 group :production do
   gem 'pg'
-  gem 'puma'
 end

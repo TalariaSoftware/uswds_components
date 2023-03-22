@@ -50,13 +50,13 @@ RSpec.describe UswdsComponents::TextInputComponent, type: :component do
     context "when the object does not have errors" do
       let(:object) { article_class.new }
 
-      it { is_expected.to match_array(['usa-label']) }
+      it { is_expected.to contain_exactly('usa-label') }
     end
 
     context "when the object has errors on the field" do
       let(:object) { article_class.new.tap(&:valid?) }
 
-      it { is_expected.to match_array(['usa-label', 'usa-label--error']) }
+      it { is_expected.to contain_exactly('usa-label', 'usa-label--error') }
     end
   end
 
@@ -65,12 +65,12 @@ RSpec.describe UswdsComponents::TextInputComponent, type: :component do
 
     let(:object) { article_class.new }
 
-    it { is_expected.to match_array(['usa-input']) }
+    it { is_expected.to contain_exactly('usa-input') }
 
     context "when the object has errors on the field" do
       let(:object) { article_class.new.tap(&:valid?) }
 
-      it { is_expected.to match_array(['usa-input', 'usa-input--error']) }
+      it { is_expected.to contain_exactly('usa-input', 'usa-input--error') }
     end
 
     context "with the success option" do
@@ -78,7 +78,7 @@ RSpec.describe UswdsComponents::TextInputComponent, type: :component do
         described_class.new form: form, attribute: :title, success: true
       end
 
-      it { is_expected.to match_array(['usa-input', 'usa-input--success']) }
+      it { is_expected.to contain_exactly('usa-input', 'usa-input--success') }
     end
   end
 

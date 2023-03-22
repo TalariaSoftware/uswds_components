@@ -50,13 +50,13 @@ RSpec.describe UswdsComponents::TextAreaComponent, type: :component do
     context "when the object does not have errors" do
       let(:object) { article_class.new }
 
-      it { is_expected.to match_array(['usa-label']) }
+      it { is_expected.to contain_exactly('usa-label') }
     end
 
     context "when the object has errors on the field" do
       let(:object) { article_class.new.tap(&:valid?) }
 
-      it { is_expected.to match_array(['usa-label', 'usa-label--error']) }
+      it { is_expected.to contain_exactly('usa-label', 'usa-label--error') }
     end
   end
 
@@ -65,12 +65,12 @@ RSpec.describe UswdsComponents::TextAreaComponent, type: :component do
 
     let(:object) { article_class.new }
 
-    it { is_expected.to match_array(['usa-textarea']) }
+    it { is_expected.to contain_exactly('usa-textarea') }
 
     context "when the object has errors on the field" do
       let(:object) { article_class.new.tap(&:valid?) }
 
-      it { is_expected.to match_array(['usa-textarea', 'usa-textarea--error']) }
+      it { is_expected.to contain_exactly('usa-textarea', 'usa-textarea--error') } # rubocop:disable Layout/LineLength
     end
   end
 end
