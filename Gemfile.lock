@@ -95,6 +95,8 @@ GEM
     crass (1.0.6)
     css_parser (1.14.0)
       addressable
+    cssbundling-rails (1.2.0)
+      railties (>= 6.0.0)
     date (3.3.3)
     debug (1.8.0)
       irb (>= 1.5.0)
@@ -191,6 +193,11 @@ GEM
     parser (3.2.2.1)
       ast (~> 2.4.1)
     pg (1.5.3)
+    propshaft (0.7.0)
+      actionpack (>= 7.0.0)
+      activesupport (>= 7.0.0)
+      rack
+      railties (>= 7.0.0)
     public_suffix (5.0.1)
     puma (6.2.2)
       nio4r (~> 2.0)
@@ -315,12 +322,14 @@ DEPENDENCIES
   brakeman
   bundler-audit
   capybara
+  cssbundling-rails
   debug
   haml-lint
   html-proofer (~> 3)
   license_finder
   lookbook
   pg
+  propshaft
   puma
   rspec-rails
   rubocop
@@ -330,4 +339,4 @@ DEPENDENCIES
   uswds_components!
 
 BUNDLED WITH
-   2.3.7
+   2.3.18

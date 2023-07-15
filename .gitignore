@@ -2,9 +2,12 @@
 /coverage
 /log/*.log
 /pkg/
+/spec/dummy/app/assets/builds/*
+!/spec/dummy/app/assets/builds/.keep
 /spec/dummy/db/*.sqlite3
 /spec/dummy/db/*.sqlite3-*
 /spec/dummy/log/*.log
+/spec/dummy/node_modules/
 /spec/dummy/storage/
 /spec/dummy/tmp/
 /tmp/

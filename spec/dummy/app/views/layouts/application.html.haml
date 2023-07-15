@@ -4,22 +4,12 @@
     %title Dummy
     = csrf_meta_tags
     = csp_meta_tag
-
-    %link{crossorigin: 'anonymous',
-    href: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/css/uswds.min.css',
-    integrity: 'sha256-6ZoI2WgL6VJKEfe5qQALzkObY0bqZvN/wAgkjgFtD/o=',
-    rel: 'stylesheet'}
-    %script{crossorigin: :anonymous,
-    integrity: 'sha256-s8ivtssrvlThzW9kP7IobVBTgrj2tXanipFmUrGRadE=',
-    src: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/js/uswds-init.min.js'}
-
     = stylesheet_link_tag 'application'
+    = javascript_include_tag 'js/uswds-init.min.js'
   %body
     .grid-container
       .grid-row
         %main.tablet:grid-col-fill
           %h1= @preview&.name
           = yield
-    %script{crossorigin: :anonymous,
-    integrity: 'sha256-wFSqIde7dSXUsICyl/9wZcm9Cer7aPhCloW7nMjsvPs=',
-    src: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/js/uswds.min.js'}
+    = javascript_include_tag 'js/uswds.min.js'

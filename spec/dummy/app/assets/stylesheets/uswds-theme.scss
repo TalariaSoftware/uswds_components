@@ -1,0 +1,7 @@
+// https://designsystem.digital.gov/documentation/settings/
+@use "uswds-core" with (
+  $theme-image-path: "img",
+  $theme-font-path: "fonts",
+  $theme-show-compile-warnings: true,
+  $theme-show-notifications: false,
+);
