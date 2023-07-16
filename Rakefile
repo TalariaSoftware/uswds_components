@@ -21,6 +21,6 @@ task default: %i[
 namespace :assets do
   desc 'Precompile assets for dummy app'
   task :precompile do
-    `cd spec/dummy; bundle exec rake assets:precompile`
+    `cd spec/dummy; yarn install --frozen-lockfile && bundle exec rake assets:precompile` # rubocop:disable Layout/LineLength
   end
 end
