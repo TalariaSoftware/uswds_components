@@ -26,6 +26,9 @@ jobs:
         node-version: '16'
         cache: yarn
         cache-dependency-path: spec/dummy/yarn.lock
+    - run: yarn install --frozen-lockfile
+      name: Install NPM packages
+      working-directory: ./spec/dummy
     - run: bundle exec rspec
       name: Run specs
     - uses: paambaati/codeclimate-action@v3.0.0
