@@ -29,6 +29,8 @@ jobs:
     - run: yarn install --frozen-lockfile
       name: Install NPM packages
       working-directory: ./spec/dummy
+    - run: rake assets:precompile
+      name: Compile assets
     - run: bundle exec rspec
       name: Run specs
     - uses: paambaati/codeclimate-action@v3.0.0
