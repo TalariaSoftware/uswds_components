@@ -17,3 +17,10 @@ task default: %i[
   brakeman:check
   bundle:audit
 ]
+
+namespace :assets do
+  desc 'Precompile assets for dummy app'
+  task :precompile do
+    `cd spec/dummy; bundle exec rake assets:precompile`
+  end
+end
