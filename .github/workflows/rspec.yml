@@ -31,6 +31,7 @@ jobs:
       working-directory: ./spec/dummy
     - run: rake assets:precompile
       name: Compile assets
+      working-directory: ./spec/dummy
     - run: bundle exec rspec
       name: Run specs
     - uses: paambaati/codeclimate-action@v3.0.0
