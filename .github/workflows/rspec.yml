@@ -21,6 +21,11 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby-version }}
         bundler-cache: true
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '16'
+        cache: yarn
+        cache-dependency-path: spec/dummy/yarn.lock
     - run: bundle exec rspec
       name: Run specs
     - uses: paambaati/codeclimate-action@v3.0.0
