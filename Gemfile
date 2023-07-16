@@ -4,6 +4,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 # Specify your gem's dependencies in uswds_components.gemspec.
 gemspec
 
+ruby '3.2.2'
+
 gem 'lookbook'
 
 gem 'brakeman'
