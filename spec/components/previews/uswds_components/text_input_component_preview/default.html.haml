@@ -7,5 +7,4 @@
 
 = form_for article, url: '#', html: { class: 'usa-form' } do |f|
   = render UswdsComponents::TextInputComponent.new(form: f, attribute: :title,
-    hint: params[:hint], success: params[:success])
-
+                                                   hint: params[:hint], success: params[:success])

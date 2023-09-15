@@ -1,7 +1,7 @@
 = form_with(**form_options, html: { class: form_classes, role: :search }) do
   %label.usa-sr-only{for: query_field_id} Search
   %input.usa-input{id: query_field_id, name: query_param, type: :search,
-    value: params[query_param]}
+                   value: params[query_param]}
   %button.usa-button{type: :submit}
     - unless small?
       %span.usa-search__submit-text Search

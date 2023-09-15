@@ -3,5 +3,7 @@ exclude:
 linters:
   ConsecutiveSilentScripts:
     exclude: spec/components/**/*
+  LineLength:
+    max: 160
   SpaceInsideHashAttributes:
     style: no_space
