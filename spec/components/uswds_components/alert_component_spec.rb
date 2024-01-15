@@ -31,12 +31,12 @@ RSpec.describe UswdsComponents::AlertComponent, type: :component do
 
   it "is an alert" do
     render_component
-    expect(page).to have_selector('div.usa-alert')
+    expect(page).to have_css('div.usa-alert')
   end
 
   it "has a body" do
     render_component
-    expect(page).to have_selector('.usa-alert div.usa-alert__body')
+    expect(page).to have_css('.usa-alert div.usa-alert__body')
   end
 
   it "includes the content" do
@@ -50,12 +50,12 @@ RSpec.describe UswdsComponents::AlertComponent, type: :component do
 
       it "is a slim alert" do
         render_component
-        expect(page).to have_selector('.usa-alert.usa-alert--slim')
+        expect(page).to have_css('.usa-alert.usa-alert--slim')
       end
 
       it "does not include a heading" do
         render_component
-        expect(page).not_to have_selector('.usa-alert__heading')
+        expect(page).to have_no_css('.usa-alert__heading')
       end
     end
 
@@ -65,7 +65,7 @@ RSpec.describe UswdsComponents::AlertComponent, type: :component do
       it "includes the heading" do
         render_component
         expect(page)
-          .to have_selector('.usa-alert .usa-alert__body h3.usa-alert__heading')
+          .to have_css('.usa-alert .usa-alert__body h3.usa-alert__heading')
       end
 
       it "includes the heading text" do
@@ -81,7 +81,7 @@ RSpec.describe UswdsComponents::AlertComponent, type: :component do
 
       it "is an info alert" do
         render_component
-        expect(page).to have_selector('.usa-alert.usa-alert--info')
+        expect(page).to have_css('.usa-alert.usa-alert--info')
       end
     end
 
@@ -90,7 +90,7 @@ RSpec.describe UswdsComponents::AlertComponent, type: :component do
 
       it "is an info alert" do
         render_component
-        expect(page).to have_selector('.usa-alert.usa-alert--info')
+        expect(page).to have_css('.usa-alert.usa-alert--info')
       end
     end
 
@@ -99,7 +99,7 @@ RSpec.describe UswdsComponents::AlertComponent, type: :component do
 
       it "is an warning alert" do
         render_component
-        expect(page).to have_selector('.usa-alert.usa-alert--warning')
+        expect(page).to have_css('.usa-alert.usa-alert--warning')
       end
     end
 
@@ -108,7 +108,7 @@ RSpec.describe UswdsComponents::AlertComponent, type: :component do
 
       it "is an error alert" do
         render_component
-        expect(page).to have_selector('.usa-alert.usa-alert--error')
+        expect(page).to have_css('.usa-alert.usa-alert--error')
       end
     end
 
@@ -117,7 +117,7 @@ RSpec.describe UswdsComponents::AlertComponent, type: :component do
 
       it "is an success alert" do
         render_component
-        expect(page).to have_selector('.usa-alert.usa-alert--success')
+        expect(page).to have_css('.usa-alert.usa-alert--success')
       end
     end
   end
@@ -128,7 +128,7 @@ RSpec.describe UswdsComponents::AlertComponent, type: :component do
 
       it "includes an icon" do
         render_component
-        expect(page).not_to have_selector('.usa-alert--no-icon')
+        expect(page).to have_no_css('.usa-alert--no-icon')
       end
     end
 
@@ -137,7 +137,7 @@ RSpec.describe UswdsComponents::AlertComponent, type: :component do
 
       it "includes an icon" do
         render_component
-        expect(page).not_to have_selector('.usa-alert--no-icon')
+        expect(page).to have_no_css('.usa-alert--no-icon')
       end
     end
 
@@ -146,7 +146,7 @@ RSpec.describe UswdsComponents::AlertComponent, type: :component do
 
       it "does not include an icon" do
         render_component
-        expect(page).to have_selector('.usa-alert.usa-alert--no-icon')
+        expect(page).to have_css('.usa-alert.usa-alert--no-icon')
       end
     end
   end

@@ -6,12 +6,12 @@ RSpec.describe UswdsComponents::PaginationComponent, type: :component do
 
   it "is a pagination nav component" do
     render_inline(component)
-    expect(page).to have_selector('nav.usa-pagination[aria-label="Pagination"]')
+    expect(page).to have_css('nav.usa-pagination[aria-label="Pagination"]')
   end
 
   it "contains a pagination list" do
     render_inline(component)
-    expect(page).to have_selector('nav ul.usa-pagination__list')
+    expect(page).to have_css('nav ul.usa-pagination__list')
   end
 
   it "include the content" do
@@ -28,7 +28,7 @@ RSpec.describe UswdsComponents::PaginationComponent, type: :component do
 
     it "is a pagination arrow" do
       expect(page)
-        .to have_selector('li.usa-pagination__item.usa-pagination__arrow')
+        .to have_css('li.usa-pagination__item.usa-pagination__arrow')
     end
 
     it "has a link to the previous page" do
@@ -36,13 +36,13 @@ RSpec.describe UswdsComponents::PaginationComponent, type: :component do
     end
 
     it "has the previous page classes" do
-      expect(page).to have_selector(
+      expect(page).to have_css(
         'a.usa-pagination__link.usa-pagination__previous-page',
       )
     end
 
     it "is labeled as previous page" do
-      expect(page).to have_selector('a[aria-label="Previous page"]')
+      expect(page).to have_css('a[aria-label="Previous page"]')
     end
   end
 
@@ -53,7 +53,7 @@ RSpec.describe UswdsComponents::PaginationComponent, type: :component do
 
     it "is a pagination arrow" do
       expect(page)
-        .to have_selector('li.usa-pagination__item.usa-pagination__arrow')
+        .to have_css('li.usa-pagination__item.usa-pagination__arrow')
     end
 
     it "has a link to the next page" do
@@ -61,13 +61,13 @@ RSpec.describe UswdsComponents::PaginationComponent, type: :component do
     end
 
     it "has the previous page classes" do
-      expect(page).to have_selector(
+      expect(page).to have_css(
         'a.usa-pagination__link.usa-pagination__next-page',
       )
     end
 
     it "is labeled as next page" do
-      expect(page).to have_selector('a[aria-label="Next page"]')
+      expect(page).to have_css('a[aria-label="Next page"]')
     end
   end
 
@@ -80,11 +80,11 @@ RSpec.describe UswdsComponents::PaginationComponent, type: :component do
 
     it "is a page number item" do
       expect(page)
-        .to have_selector('li.usa-pagination__item.usa-pagination__page-no')
+        .to have_css('li.usa-pagination__item.usa-pagination__page-no')
     end
 
     it "has a pagination button" do
-      expect(page).to have_selector('a.usa-pagination__button')
+      expect(page).to have_css('a.usa-pagination__button')
     end
 
     it "links the given url" do
@@ -98,11 +98,11 @@ RSpec.describe UswdsComponents::PaginationComponent, type: :component do
 
       it "does not have the current class" do
         expect(page)
-          .not_to have_selector('a.usa-pagination__button.usa-current')
+          .to have_no_css('a.usa-pagination__button.usa-current')
       end
 
       it "does not have the ARIA current attribute" do
-        expect(page).not_to have_selector('a[aria-current="page"]')
+        expect(page).to have_no_css('a[aria-current="page"]')
       end
     end
 
@@ -112,11 +112,11 @@ RSpec.describe UswdsComponents::PaginationComponent, type: :component do
       end
 
       it "has the current class" do
-        expect(page).to have_selector('a.usa-pagination__button.usa-current')
+        expect(page).to have_css('a.usa-pagination__button.usa-current')
       end
 
       it "has the ARIA current attribute" do
-        expect(page).to have_selector('a[aria-current="page"]')
+        expect(page).to have_css('a[aria-current="page"]')
       end
     end
 
@@ -126,7 +126,7 @@ RSpec.describe UswdsComponents::PaginationComponent, type: :component do
       end
 
       it "has an ARIA label with the page number" do
-        expect(page).to have_selector('a[aria-label="Page 7"]')
+        expect(page).to have_css('a[aria-label="Page 7"]')
       end
     end
 
@@ -136,7 +136,7 @@ RSpec.describe UswdsComponents::PaginationComponent, type: :component do
       end
 
       it "has an ARIA label saying it's the last page" do
-        expect(page).to have_selector('a[aria-label="Last page, page 7"]')
+        expect(page).to have_css('a[aria-label="Last page, page 7"]')
       end
     end
   end
@@ -148,11 +148,11 @@ RSpec.describe UswdsComponents::PaginationComponent, type: :component do
 
     it "is a pagination overflow" do
       expect(page)
-        .to have_selector('li.usa-pagination__item.usa-pagination__overflow')
+        .to have_css('li.usa-pagination__item.usa-pagination__overflow')
     end
 
     it "has a presentation role" do
-      expect(page).to have_selector('li[role="presentation"]')
+      expect(page).to have_css('li[role="presentation"]')
     end
 
     it "has an ellipsis" do

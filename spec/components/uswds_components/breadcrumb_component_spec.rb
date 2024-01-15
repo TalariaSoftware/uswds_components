@@ -13,7 +13,7 @@ RSpec.describe UswdsComponents::BreadcrumbComponent, type: :component do
 
   it "has an ordered list inside a nav" do
     render_component
-    expect(page).to have_selector('nav ol')
+    expect(page).to have_css('nav ol')
   end
 
   it "is a breadcrumb" do
@@ -115,7 +115,7 @@ RSpec.describe UswdsComponents::BreadcrumbComponent, type: :component do
 
     it "has a list item with a link and span inside" do
       render_component
-      expect(page).to have_selector('li a span')
+      expect(page).to have_css('li a span')
     end
 
     it "has a link to the content" do
@@ -140,7 +140,7 @@ RSpec.describe UswdsComponents::BreadcrumbComponent, type: :component do
 
       it "is not the current list item" do
         render_component
-        expect(page).not_to have_css('.usa-current')
+        expect(page).to have_no_css('.usa-current')
       end
     end
 
@@ -151,7 +151,7 @@ RSpec.describe UswdsComponents::BreadcrumbComponent, type: :component do
 
       it "has a list item with a span inside (no link)" do
         render_component
-        expect(page).to have_selector('li span')
+        expect(page).to have_css('li span')
       end
 
       it "is the current list item" do
@@ -161,7 +161,7 @@ RSpec.describe UswdsComponents::BreadcrumbComponent, type: :component do
 
       it "doesn't have a link" do
         render_component
-        expect(page).not_to have_link
+        expect(page).to have_no_link
       end
     end
 
@@ -172,12 +172,12 @@ RSpec.describe UswdsComponents::BreadcrumbComponent, type: :component do
 
       it "has a list item with a span inside (no link)" do
         render_component
-        expect(page).to have_selector('li span')
+        expect(page).to have_css('li span')
       end
 
       it "doesn't have a link" do
         render_component
-        expect(page).not_to have_link
+        expect(page).to have_no_link
       end
     end
   end

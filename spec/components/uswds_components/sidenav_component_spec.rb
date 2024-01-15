@@ -12,17 +12,17 @@ RSpec.describe UswdsComponents::SidenavComponent, type: :component do
 
   it "is a secondary navigation" do
     render_component
-    expect(page).to have_selector('nav[aria-label="Secondary navigation"]')
+    expect(page).to have_css('nav[aria-label="Secondary navigation"]')
   end
 
   it "has an unordered list inside a nav" do
     render_component
-    expect(page).to have_selector('nav ul')
+    expect(page).to have_css('nav ul')
   end
 
   it "has a sidenav list" do
     render_component
-    expect(page).to have_selector('ul.usa-sidenav')
+    expect(page).to have_css('ul.usa-sidenav')
   end
 
   it "includes the list content" do
@@ -41,7 +41,7 @@ RSpec.describe UswdsComponents::SidenavComponent, type: :component do
 
     it "has a sidenav list item" do
       render_component
-      expect(page).to have_selector('li.usa-sidenav__item')
+      expect(page).to have_css('li.usa-sidenav__item')
     end
 
     it "has a link to the content" do
@@ -56,7 +56,7 @@ RSpec.describe UswdsComponents::SidenavComponent, type: :component do
 
       it "is not the current list item" do
         render_component
-        expect(page).not_to have_css('.usa-current')
+        expect(page).to have_no_css('.usa-current')
       end
     end
 
