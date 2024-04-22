@@ -72,7 +72,7 @@ Example [application layout.](https://github.com/TalariaSoftware/uswds_component
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'uswds_components'
+gem 'uswds_components', git: 'https://github.com/TalariaSoftware/uswds_components.git'
 ```
 
 Then run `bundle`.
