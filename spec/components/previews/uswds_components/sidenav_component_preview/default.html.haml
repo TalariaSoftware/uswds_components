@@ -5,36 +5,36 @@
     %h6.usa-heading-alt
       Single level
     = render UswdsComponents::SidenavComponent.new do |nav|
-      - nav.item(href: request.path, name: 'Current page')
-      - nav.item(href: '#parent', name: 'Parent link')
-      - nav.item(href: '#parent', name: 'Parent link')
+      - nav.with_item(href: request.path, name: 'Current page')
+      - nav.with_item(href: '#parent', name: 'Parent link')
+      - nav.with_item(href: '#parent', name: 'Parent link')
 
   .tablet:grid-col-4
     %h6.usa-heading-alt
       Two levels
     = render UswdsComponents::SidenavComponent.new do |nav|
-      - nav.item(href: '#parent', name: 'Parent link')
-      - nav.item(href: request.path, name: 'Current page') do |subnav|
-        - subnav.item(href: '#child', name: 'Child link')
-        - subnav.item(href: '#child', name: 'Child link')
-        - subnav.item(href: '#child', name: 'Child link')
-        - subnav.item(href: '#child', name: 'Child link')
-        - subnav.item(href: request.path, name: 'Child link')
-      - nav.item(href: '#parent', name: 'Parent link')
+      - nav.with_item(href: '#parent', name: 'Parent link')
+      - nav.with_item(href: request.path, name: 'Current page') do |subnav|
+        - subnav.with_item(href: '#child', name: 'Child link')
+        - subnav.with_item(href: '#child', name: 'Child link')
+        - subnav.with_item(href: '#child', name: 'Child link')
+        - subnav.with_item(href: '#child', name: 'Child link')
+        - subnav.with_item(href: request.path, name: 'Child link')
+      - nav.with_item(href: '#parent', name: 'Parent link')
 
   .tablet:grid-col-4
     %h6.usa-heading-alt
       Three levels
     = render UswdsComponents::SidenavComponent.new do |nav|
-      = nav.item(href: '#parent', name: 'Parent link')
-      = nav.item(href: request.path, name: 'Current page') do |subnav|
-        = subnav.item(href: '#child', name: 'Child link')
-        = subnav.item(href: '#child', name: 'Child link')
-        = subnav.item(href: '#child', name: 'Child link') do |subsubnav|
-          = subsubnav.item(href: '#grandchild', name: 'Grandchild link')
-          = subsubnav.item(href: '#grandchild', name: 'Grandchild link')
-          = subsubnav.item(href: request.path, name: 'Grandchild link')
-        = subnav.item(href: '#child', name: 'Child link')
-        = subnav.item(href: '#child', name: 'Child link')
-        = subnav.item(href: '#child', name: 'Child link')
-      = nav.item(href: '#child', name: 'Parent link')
+      = nav.with_item(href: '#parent', name: 'Parent link')
+      = nav.with_item(href: request.path, name: 'Current page') do |subnav|
+        = subnav.with_item(href: '#child', name: 'Child link')
+        = subnav.with_item(href: '#child', name: 'Child link')
+        = subnav.with_item(href: '#child', name: 'Child link') do |subsubnav|
+          = subsubnav.with_item(href: '#grandchild', name: 'Grandchild link')
+          = subsubnav.with_item(href: '#grandchild', name: 'Grandchild link')
+          = subsubnav.with_item(href: request.path, name: 'Grandchild link')
+        = subnav.with_item(href: '#child', name: 'Child link')
+        = subnav.with_item(href: '#child', name: 'Child link')
+        = subnav.with_item(href: '#child', name: 'Child link')
+      = nav.with_item(href: '#child', name: 'Parent link')

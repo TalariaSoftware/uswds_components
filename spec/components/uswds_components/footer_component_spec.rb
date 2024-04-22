@@ -41,9 +41,9 @@ RSpec.describe UswdsComponents::FooterComponent, type: :component do
 
     def render_component
       render_inline(component) do |footer|
-        footer.primary_link(href: '#', name: 'primary')
-        footer.contact_link(href: '#', name: 'contact')
-        footer.logo(src: '#', name: 'logo section')
+        footer.with_primary_link(href: '#', name: 'primary')
+        footer.with_contact_link(href: '#', name: 'contact')
+        footer.with_logo(src: '#', name: 'logo section')
       end
     end
 

@@ -3,21 +3,21 @@ class UswdsComponents::BasicHeaderComponentPreview < ViewComponent::Preview
     render UswdsComponents::BasicHeaderComponent.new(
       image_path: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/img',
     ) do |header|
-      header.logo(href: '#', title: 'Project Title')
+      header.with_logo(href: '#', title: 'Project Title')
 
-      header.primary_item(title: 'Current Section', current: true) do |item|
-        item.submenu_item(href: '', name: 'Navigation link')
-        item.submenu_item(href: '', name: 'Navigation link')
-        item.submenu_item(href: '', name: 'Navigation link')
+      header.with_primary_item(title: 'Current Section', current: true) do |item|
+        item.with_submenu_item(href: '', name: 'Navigation link')
+        item.with_submenu_item(href: '', name: 'Navigation link')
+        item.with_submenu_item(href: '', name: 'Navigation link')
       end
 
-      header.primary_item(title: 'Section') do |item|
-        item.submenu_item(href: '', name: 'Navigation link')
-        item.submenu_item(href: '', name: 'Navigation link')
-        item.submenu_item(href: '', name: 'Navigation link')
+      header.with_primary_item(title: 'Section') do |item|
+        item.with_submenu_item(href: '', name: 'Navigation link')
+        item.with_submenu_item(href: '', name: 'Navigation link')
+        item.with_submenu_item(href: '', name: 'Navigation link')
       end
 
-      header.primary_item(href: '#', title: 'Simple link')
+      header.with_primary_item(href: '#', title: 'Simple link')
 
       raw('
       <form class="usa-search usa-search--small" role="search">
@@ -36,17 +36,17 @@ class UswdsComponents::BasicHeaderComponentPreview < ViewComponent::Preview
     render UswdsComponents::BasicHeaderComponent.new(
       image_path: 'https://cdn.jsdelivr.net/npm/uswds@2.13.0/dist/img',
     ) do |header|
-      header.logo(href: '#', title: 'Project Title')
+      header.with_logo(href: '#', title: 'Project Title')
 
-      header.primary_item(title: 'Current Section', current: true) do |item|
-        item.submenu_item(href: '', name: 'Navigation link')
-        item.submenu_item(href: '', name: 'Navigation link')
-        item.submenu_item(href: '', name: 'Navigation link')
+      header.with_primary_item(title: 'Current Section', current: true) do |item|
+        item.with_submenu_item(href: '', name: 'Navigation link')
+        item.with_submenu_item(href: '', name: 'Navigation link')
+        item.with_submenu_item(href: '', name: 'Navigation link')
       end
 
-      header.primary_item(href: '#', title: 'Simple link')
+      header.with_primary_item(href: '#', title: 'Simple link')
 
-      header.primary_item do
+      header.with_primary_item do
         raw('
           <form>
             <button class="width-full">

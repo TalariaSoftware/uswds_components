@@ -2,13 +2,15 @@ require 'rails_helper'
 
 # https://designsystem.digital.gov/components/breadcrumb/
 RSpec.describe UswdsComponents::BreadcrumbComponent, type: :component do
-  subject(:component) { described_class.new }
+  subject(:component) do
+    described_class.new do |c|
+      c.with_crumb(href: '#home', name: 'Home')
+      c.with_crumb(href: '#feds', name: 'Feds')
+    end
+  end
 
   def render_component
-    render_inline(component) do |trail|
-      trail.crumb(href: '#home', name: 'Home')
-      trail.crumb(href: '#feds', name: 'Feds')
-    end
+    render_inline(component)
   end
 
   it "has an ordered list inside a nav" do
@@ -55,30 +57,30 @@ RSpec.describe UswdsComponents::BreadcrumbComponent, type: :component do
         described_class.new(name: "Hello", href: component_path)
       end
 
+      let(:component_path) { '/component/path' }
+
       before do
-        allow(request).to receive(:path).and_return(current_path)
-        render_component
+        allow(component) # rubocop:disable RSpec/SubjectStub
+          .to receive(:current_page?).with(component_path)
+          .and_return(current_page)
       end
 
-      context "when the component matches the request path" do
-        let(:current_path) { '/current/path' }
-        let(:component_path) { '/current/path' }
+      context "when the URL helper says it is not the current page" do
+        let(:current_page) { false }
+
+        it { is_expected.not_to be_current }
+      end
+
+      context "when the URL helper says it is the current page" do
+        let(:current_page) { true }
 
         it { is_expected.to be_current }
-      end
 
-      context "when the component path does not match the request path" do
-        let(:current_path) { '/current/path' }
-        let(:component_path) { '/diff/path' }
+        context "when the component path is blank" do
+          let(:component_path) { '' }
 
-        it { is_expected.not_to be_current }
-      end
-
-      context "when the component path is blank and current is root" do
-        let(:current_path) { '/' }
-        let(:component_path) { '' }
-
-        it { is_expected.not_to be_current }
+          it { is_expected.not_to be_current }
+        end
       end
     end
 
@@ -87,27 +89,29 @@ RSpec.describe UswdsComponents::BreadcrumbComponent, type: :component do
         described_class.new(name: "Hello", href: component_path)
       end
 
-      let(:current_path) { '/current/path' }
+      let(:component_path) { '/component_path/path' }
 
       before do
-        allow(request).to receive(:path).and_return(current_path)
-        render_component
+        allow(component) # rubocop:disable RSpec/SubjectStub
+          .to receive(:current_page?).with(component_path)
+          .and_return(current_page)
       end
 
-      context "when it points to a differnt page" do
-        let(:component_path) { '/diff/path' }
+      context "when it points to a different page" do
+        let(:current_page) { false }
 
         it { is_expected.to be_linked }
       end
 
       context "when it points to the current page" do
-        let(:component_path) { '/current/path' }
+        let(:current_page) { true }
 
         it { is_expected.not_to be_linked }
       end
 
       context "when it points nowhere" do
         let(:component_path) { '' }
+        let(:current_page) { false }
 
         it { is_expected.not_to be_linked }
       end
@@ -133,35 +137,45 @@ RSpec.describe UswdsComponents::BreadcrumbComponent, type: :component do
       expect(page).to have_link(class: 'usa-breadcrumb__link')
     end
 
-    context "when the link is not to the current page" do
+    describe "variations for current page" do
+      subject(:component) do
+        described_class.new(name: "Hello", href: component_path)
+      end
+
+      let(:component_path) { '/component_path/path' }
+
       before do
-        allow(request).to receive(:path).and_return('/other/path')
+        allow(component) # rubocop:disable RSpec/SubjectStub
+          .to receive(:current_page?).with(component_path)
+          .and_return(current_page)
       end
 
-      it "is not the current list item" do
-        render_component
-        expect(page).to have_no_css('.usa-current')
-      end
-    end
+      context "when the link is not to the current page" do
+        let(:current_page) { false }
 
-    context "when the link is to the current page" do
-      before do
-        allow(request).to receive(:path).and_return('/fake/path')
+        it "is not the current list item" do
+          render_component
+          expect(page).to have_no_css('.usa-current')
+        end
       end
 
-      it "has a list item with a span inside (no link)" do
-        render_component
-        expect(page).to have_css('li span')
-      end
+      context "when the link is to the current page" do
+        let(:current_page) { true }
 
-      it "is the current list item" do
-        render_component
-        expect(page).to have_css('li.usa-current')
-      end
+        it "has a list item with a span inside (no link)" do
+          render_component
+          expect(page).to have_css('li span')
+        end
 
-      it "doesn't have a link" do
-        render_component
-        expect(page).to have_no_link
+        it "is the current list item" do
+          render_component
+          expect(page).to have_css('li.usa-current')
+        end
+
+        it "doesn't have a link" do
+          render_component
+          expect(page).to have_no_link
+        end
       end
     end
 

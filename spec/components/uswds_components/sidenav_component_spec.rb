@@ -6,7 +6,7 @@ RSpec.describe UswdsComponents::SidenavComponent, type: :component do
 
   def render_component
     render_inline(component) do |nav|
-      nav.item href: '/path', name: 'an item'
+      nav.with_item href: '/path', name: 'an item'
     end
   end
 
@@ -51,7 +51,9 @@ RSpec.describe UswdsComponents::SidenavComponent, type: :component do
 
     context "when the link is not to the current page" do
       before do
-        allow(request).to receive(:path).and_return('/other/path')
+        allow(component) # rubocop:disable RSpec/SubjectStub
+          .to receive(:current_page?).with('/fake/path')
+          .and_return(false)
       end
 
       it "is not the current list item" do
@@ -62,7 +64,9 @@ RSpec.describe UswdsComponents::SidenavComponent, type: :component do
 
     context "when the link is to the current page" do
       before do
-        allow(request).to receive(:path).and_return('/fake/path')
+        allow(component) # rubocop:disable RSpec/SubjectStub
+          .to receive(:current_page?).with('/fake/path')
+          .and_return(true)
       end
 
       it "is the current list item" do

@@ -21,8 +21,8 @@ RSpec.describe UswdsComponents::CollectionComponent, type: :component do
 
   def render_component
     render_inline(component) do |_collection|
-      component.item(href: '/') do |item|
-        item.header { 'News' }
+      component.with_item(href: '/') do |item|
+        item.with_header { 'News' }
         'From France'
       end
     end
@@ -36,7 +36,7 @@ RSpec.describe UswdsComponents::CollectionComponent, type: :component do
   describe UswdsComponents::CollectionComponent::Item do
     def render_component
       render_inline(component) do |item|
-        item.header { "Daily News" }
+        item.with_header { "Daily News" }
         "For some doll"
       end
     end
