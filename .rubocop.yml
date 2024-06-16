@@ -62,13 +62,6 @@ Metrics/MethodLength:
     - db/migrate/*.rb
     - spec/components/previews/**/*
 
-RSpec/Capybara/FeatureMethods:
-  EnabledMethods:
-    - feature
-    - scenario
-    - xfeature
-    - xscenario
-
 RSpec/ExampleLength:
   Exclude:
     - spec/system/*
