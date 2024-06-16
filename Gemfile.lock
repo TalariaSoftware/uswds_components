@@ -374,6 +374,7 @@ DEPENDENCIES
   puma
   rspec-rails
   rubocop
+  rubocop-capybara
   rubocop-rspec
   simplecov
   sqlite3

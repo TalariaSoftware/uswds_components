@@ -18,6 +18,7 @@ gem 'propshaft'
 gem 'puma'
 gem 'rspec-rails'
 gem 'rubocop'
+gem 'rubocop-capybara'
 gem 'rubocop-rspec'
 
 group :development do
