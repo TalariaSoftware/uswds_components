@@ -18,5 +18,9 @@ module UswdsComponents
     def locale_path(locale)
       url_for(locale: locale)
     end
+
+    def buttons?
+      available_locales.count < 3
+    end
   end
 end

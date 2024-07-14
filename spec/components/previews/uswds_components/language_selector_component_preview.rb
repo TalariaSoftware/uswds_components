@@ -3,7 +3,12 @@ class UswdsComponents::LanguageSelectorComponentPreview < ViewComponent::Preview
   # ----------------
   #
   # [See at USWDS](https://designsystem.digital.gov/components/language_selector/)
-  def default
+  def two_languages
+    render UswdsComponents::LanguageSelectorComponent
+      .new(available_locales: %i[en es])
+  end
+
+  def many_languages
     render UswdsComponents::LanguageSelectorComponent
       .new(available_locales: I18n.available_locales)
   end

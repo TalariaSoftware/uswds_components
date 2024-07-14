@@ -8,7 +8,7 @@ RSpec.describe UswdsComponents::LanguageSelectorComponent, type: :component do
 
   before do
     original_url_for = component.method(:url_for)
-    allow(component).to receive(:url_for) do |options|
+    allow(component).to receive(:url_for) do |options| # rubocop:disable RSpec/SubjectStub
       if options.is_a?(Hash) && options.keys == [:locale]
         "/current_path?locale=#{options[:locale]}"
       else
@@ -19,7 +19,7 @@ RSpec.describe UswdsComponents::LanguageSelectorComponent, type: :component do
     render_inline(component)
   end
 
-  describe "when there are two locales", pending: "Two-locale design" do
+  describe "when there are two locales" do
     let(:locales) { %i[en es] }
 
     it "has a link to the current locale" do
@@ -28,7 +28,7 @@ RSpec.describe UswdsComponents::LanguageSelectorComponent, type: :component do
 
     it "has a link to another locale" do
       expect(page)
-        .to have_link("español (Spanish)", href: '/current_path?locale=es')
+        .to have_link("español", href: '/current_path?locale=es')
     end
   end
 
