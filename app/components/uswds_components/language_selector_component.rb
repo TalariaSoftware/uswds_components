@@ -16,7 +16,7 @@ module UswdsComponents
     end
 
     def locale_path(locale)
-      url_for(params.merge(locale: locale))
+      url_for(locale: locale)
     end
   end
 end
