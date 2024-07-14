@@ -1,0 +1,12 @@
+.usa-language-container.usa-language--small
+  %ul.usa-language__primary.usa-accordion
+    %li.usa-language__primary-item
+      %button.usa-button.usa-language__link{aria: { controls: 'language-options', expanded: 'false', role: :button, type: :button }}
+        = t '.languages'
+      %ul.usa-language__submenu#language-options{hidden: 'true'}
+        - available_locales.each do |locale|
+          %li.usa-language__submenu-item
+            = link_to locale_path(locale) do
+              %span{lang: locale, 'xml:lang' => locale}
+                %strong= native_name(locale)
+                = "(#{locale_name(locale)})" unless locale == I18n.locale

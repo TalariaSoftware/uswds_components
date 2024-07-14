@@ -1,0 +1,10 @@
+es:
+  languages: Idiomas
+  locales:
+    ar: árabe
+    en: inglés
+    es: español
+    fr: francés
+    it: italiano
+    ru: ruso
+    zh: chino
