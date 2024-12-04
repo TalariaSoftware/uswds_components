@@ -20,10 +20,7 @@ gem 'rspec-rails'
 gem 'rubocop'
 gem 'rubocop-capybara'
 gem 'rubocop-rspec'
-
-group :development do
-  gem 'sqlite3', '~>1.4'
-end
+gem 'sqlite3'
 
 group :test do
   gem 'simplecov', require: false
