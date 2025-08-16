@@ -14,7 +14,7 @@ Gem::Specification.new do |spec|
   # to allow pushing to a single host or delete this section to allow pushing to any host.
   spec.metadata['allowed_push_host'] = "TODO: Set to 'http://mygemserver.com'"
   # Require multifactor auth to push to rubygems
-  spec.metadata = { 'rubygems_mfa_required' => 'true' }
+  spec.metadata['rubygems_mfa_required'] = 'true'
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/TalariaSoftware/uswds_components'

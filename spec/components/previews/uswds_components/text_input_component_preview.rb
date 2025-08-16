@@ -1,6 +1,7 @@
 class UswdsComponents::TextInputComponentPreview < ViewComponent::Preview
   class Article
     include ActiveModel::Model
+
     attr_accessor :title
   end
 

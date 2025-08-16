@@ -113,7 +113,7 @@ module MatchHtmlFragment
       end
     end
 
-    def fail(message, node)
+    def fail(message, node) # rubocop:disable Naming/PredicateMethod
       @failure_message = message
       @failure_message += " (at #{node.css_path})"
       false

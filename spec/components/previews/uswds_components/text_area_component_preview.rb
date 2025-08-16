@@ -1,6 +1,7 @@
 class UswdsComponents::TextAreaComponentPreview < ViewComponent::Preview
   class Article
     include ActiveModel::Model
+
     attr_accessor :body
   end
 
