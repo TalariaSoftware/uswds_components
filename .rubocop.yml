@@ -29,7 +29,7 @@ Layout/LineEndStringConcatenationIndentation:
 
 Layout/LineLength:
   Max: 80
-  IgnoreCopDirectives: true
+  AllowCopDirectives: true
   AllowedPatterns:
     - '^\s*# '
   Exclude:

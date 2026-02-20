@@ -14,15 +14,17 @@ RSpec.describe UswdsComponents::AlertComponent, type: :component do
     end
   end
 
-  info_alert = <<~HTML
-    <div class="usa-alert usa-alert--info usa-alert--slim" >
-      <div class="usa-alert__body">
-        <p class="usa-alert__text">
-          Check six
-        </p>
+  let(:info_alert) do
+    <<~HTML
+      <div class="usa-alert usa-alert--info usa-alert--slim" >
+        <div class="usa-alert__body">
+          <p class="usa-alert__text">
+            Check six
+          </p>
+        </div>
       </div>
-    </div>
-  HTML
+    HTML
+  end
 
   it "matches the html" do
     render_component
