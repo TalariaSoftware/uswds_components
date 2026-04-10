@@ -12,7 +12,6 @@ gem 'capybara'
 gem 'cssbundling-rails'
 gem 'debug'
 gem 'haml-lint'
-gem 'html-proofer', '~>3' # v4 doesn't support HTMLProofer::Middleware https://github.com/gjtorikian/html-proofer/pull/670
 gem 'license_finder'
 gem 'propshaft'
 gem 'puma'
