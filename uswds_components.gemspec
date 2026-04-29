@@ -25,7 +25,7 @@ Gem::Specification.new do |spec|
   spec.files = Dir['{app,config,db,lib}/**/*', 'LICENSE.md', 'Rakefile',
     'README.md']
 
-  spec.required_ruby_version = '>= 2.5'
+  spec.required_ruby_version = '>= 3.3'
 
   spec.add_dependency 'haml-rails'
   spec.add_dependency 'rails', '>= 6.1.4.1'

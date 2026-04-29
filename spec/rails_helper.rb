@@ -25,7 +25,7 @@ require 'capybara/rspec'
 # require only the support files necessary.
 #
 Dir[UswdsComponents::Engine.root.join('spec', 'support', '**',
-  '*.rb')].sort.each do |f|
+  '*.rb')].each do |f|
   require f
 end
 
